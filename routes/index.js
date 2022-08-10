@@ -6,7 +6,7 @@ var nodemailer = require("nodemailer");
 
 require("dotenv").config();
 
-console.log("i got here");
+
 router.get("/", function (req, res) {
   try {
     res.render("index", {
