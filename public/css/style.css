@@ -24,6 +24,7 @@
     -moz-osx-font-smoothing: grayscale;
   }
   
+  
   .icon-asterisk:before {
     content: "\f069";
   }
@@ -5771,7 +5772,7 @@
     margin-bottom: 50px; }
     .ul-check li {
       position: relative;
-      padding-left: 35px;
+      padding-left: 25px;
       margin-bottom: 15px;
       line-height: 1.5; }
       .ul-check li:before {
@@ -6460,14 +6461,15 @@
   
   .pricing {
     background: #fff;
-    padding: 30px; }
+    padding: 20px; }
     .pricing .price > span {
       color: #cccccc; }
       .pricing .price > span > span {
         font-size: 3rem;
         color: #007bff; }
     .pricing ul li {
-      margin-bottom: 20px; }
+      margin-bottom: 20px;
+    padding-right: 3rem; }
   
   .pricing-popular .pricing {
     -webkit-box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.3);
