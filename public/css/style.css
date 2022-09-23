@@ -6779,6 +6779,22 @@ body > div.site-wrap > footer > div > div:nth-child(1) > div.col-md-9 > div > di
   margin-top: 30px;
 }
 
+#submitButton:hover {
+  background-color: #0f76e3;
+  border-color: #0f76e3;
+}
+#submitButton:disabled {
+  opacity: 0.8;
+}
+#pricing-section > div > div:nth-child(2) > div.col-md-6.mb-4.mb-lg-0.col-lg-4.pricing-popular.aos-init.aos-animate > div > p > a:hover{
+  background-color: #0f76e3;
+  border-color: #0f76e3;
+}
+#home-section > div > div > div > div > div.owl-stage-outer > div > div> div > div > a:hover {
+  background-color: #0f76e3;
+  border-color: #0f76e3;
+}
+
 @media only screen and (max-width:767px) {
   body > div.site-wrap > footer > div > div:nth-child(1) > div.col-md-3 {
     margin-top: 15px;

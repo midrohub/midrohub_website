@@ -27,32 +27,32 @@ function validateForm() {
 
   if (nameIs === "" || nameIs === null) {
     alertName
-      .html("<small style='float:right'>Your name is required</small>")
+      .html("<small style='float:right'>Your name is required</small>").css('color','red')
       .fadeIn("slow");
   }
   if (emailIs === "" || emailIs === null) {
     alertEmail
-      .html("<small style='float:right'>Your email is required</small>")
+      .html("<small style='float:right'>Your email is required</small>").css('color','red')
       .fadeIn("slow");
   }
   if (fnameIs === "" || fnameIs === null) {
     alertFname
-      .html("<small style='float:right'>Your firstname is required</small>")
+      .html("<small style='float:right'>Your firstname is required</small>").css('color','red')
       .fadeIn("slow");
   }
   if (lnameIs === "" || lnameIs === null) {
     alertLname
-      .html("<small style='float:right'>Your lastname is required</small>")
+      .html("<small style='float:right'>Your lastname is required</small>").css('color','red')
       .fadeIn("slow");
   }
   if (subjectIs === "" || subjectIs === null) {
     alertSubject
-      .html("<small style='float:right'>Your subject is required</small>")
+      .html("<small style='float:right'>Your subject is required</small>").css('color','red')
       .fadeIn("slow");
   }
   if (messageIs === "" || messageIs === null) {
     alertMessage
-      .html("<small style='float:right'>Your message is required</small>")
+      .html("<small style='float:right'>Your message is required</small>").css('color','red')
       .fadeIn("slow");
   }
 
@@ -65,10 +65,10 @@ function validateForm() {
     alertName.fadeOut("slow");
   });
   $("#fname").keyup(function () {
-    alertName.fadeOut("slow");
+    alertFname.fadeOut("slow");
   });
   $("#lname").keyup(function () {
-    alertName.fadeOut("slow");
+    alertLname.fadeOut("slow");
   });
   $("#subject").on("keyup", function () {
     alertSubject.fadeOut("slow");
@@ -140,6 +140,7 @@ $("#submitButton").click(function (e) {
         //     $('#modal-success-header').html(response.responseHeader);
         //     $('#modal-success-content').html(response.responseText);
         //     $('#success').modal('show');
+             swal("Message has been sent", "", "success");
              form.trigger('reset'); // reset form
              submit.html("Send Message");// reset submit button text
              $('#contactForm').find(':input').attr('disabled', false);
