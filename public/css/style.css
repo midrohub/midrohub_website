@@ -24,7 +24,10 @@
     -moz-osx-font-smoothing: grayscale;
   }
   
-  
+  .swal-wide{
+    width:1000px !important;
+  }
+
   .icon-asterisk:before {
     content: "\f069";
   }
