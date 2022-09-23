@@ -12,7 +12,7 @@ $("#email").on("keyup", function () {
     alertEmail.fadeOut("slow");
   } else {
     alertEmail
-      .html("<small style='float:right'>Email is invalid</small>")
+      .html("<small style='float:right'>Your email is invalid</small>")
       .css("color", "red")
       .fadeIn("slow");
   }
