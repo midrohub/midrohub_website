@@ -1,12 +1,22 @@
 console.log("the script is properly referenced");
 
-var alert = $("#alert-msg"); // alert div for show alert message
-var alertName = $("#alert-name-msg"); // alert div for show alert message
 var alertFname = $("#alert-fname-msg"); // alert div for show alert message
 var alertLname = $("#alert-lname-msg"); // alert div for show alert message
 var alertEmail = $("#alert-email-msg"); // alert div for show alert message
 var alertSubject = $("#alert-subject-msg"); // alert div for show alert message
 var alertMessage = $("#alert-message-msg"); // alert div for show alert message
+
+$("#email").on("keyup", function () {
+  let isValid = validateEmail($("#email").val());
+  if (isValid) {
+    alertEmail.fadeOut("slow");
+  } else {
+    alertEmail
+      .html("<small style='float:right'>Email is invalid</small>")
+      .css("color", "red")
+      .fadeIn("slow");
+  }
+});
 
 function validateEmail(email) {
   var re =
@@ -14,57 +24,51 @@ function validateEmail(email) {
   return re.test(String(email).toLowerCase());
 }
 function validateForm() {
-  $("#email").on("keyup", function () {
-    validateEmail(email);
-  });
-
-  var nameIs = document.forms["contactForm"]["name"].value;
   var fnameIs = document.forms["contactForm"]["fname"].value;
   var lnameIs = document.forms["contactForm"]["lname"].value;
   var emailIs = document.forms["contactForm"]["email"].value;
   var subjectIs = document.forms["contactForm"]["subject"].value;
   var messageIs = document.forms["contactForm"]["message"].value;
 
-  if (nameIs === "" || nameIs === null) {
-    alertName
-      .html("<small style='float:right'>Your name is required</small>").css('color','red')
-      .fadeIn("slow");
-  }
   if (emailIs === "" || emailIs === null) {
     alertEmail
-      .html("<small style='float:right'>Your email is required</small>").css('color','red')
+      .html("<small style='float:right'>Your email is required</small>")
+      .css("color", "red")
       .fadeIn("slow");
   }
   if (fnameIs === "" || fnameIs === null) {
     alertFname
-      .html("<small style='float:right'>Your firstname is required</small>").css('color','red')
+      .html("<small style='float:right'>Your firstname is required</small>")
+      .css("color", "red")
       .fadeIn("slow");
   }
   if (lnameIs === "" || lnameIs === null) {
     alertLname
-      .html("<small style='float:right'>Your lastname is required</small>").css('color','red')
+      .html("<small style='float:right'>Your lastname is required</small>")
+      .css("color", "red")
       .fadeIn("slow");
   }
   if (subjectIs === "" || subjectIs === null) {
     alertSubject
-      .html("<small style='float:right'>Your subject is required</small>").css('color','red')
+      .html("<small style='float:right'>Your subject is required</small>")
+      .css("color", "red")
       .fadeIn("slow");
   }
   if (messageIs === "" || messageIs === null) {
     alertMessage
-      .html("<small style='float:right'>Your message is required</small>").css('color','red')
+      .html("<small style='float:right'>Your message is required</small>")
+      .css("color", "red")
       .fadeIn("slow");
   }
 
   $("#email").on("keyup", function () {
-    validateEmail(email);
-    alertEmail.fadeOut("slow");
+    let isValid = validateEmail($("#email").val());
+
+    isValid && alertEmail.fadeOut("slow");
   });
 
-  $("#name").keyup(function () {
-    alertName.fadeOut("slow");
-  });
   $("#fname").keyup(function () {
+    console.log("skhfks");
     alertFname.fadeOut("slow");
   });
   $("#lname").keyup(function () {
@@ -104,24 +108,16 @@ $("#submitButton").click(function (e) {
     message: message,
   };
 
-  //no alert message yet
-  // if (fname == "" || fname == null || lname == "" || lname == null || email == "" || email == null || subject == "" || subject == null || message == "" || message == null) {
-
-  //     $('#alert-msg').html("<p style='text-align:center' class='alert alert-danger'>Please fill in all the fields. All fields are required.</p>")
-  //     $('#alert-msg').show();
-  //     validateForm();
-
-  // }
-
   if (
     fname !== "" &&
     lname !== "" &&
     email !== "" &&
+    validateEmail(email) == true &&
     subject !== "" &&
     message !== ""
   ) {
-    console.log(dataObject);
-   
+    submit.html("<i class = 'fa fa-spinner fa-spin'></i> Sending...");
+    $("#contactForm :input").attr("disabled", "disabled");
     $.ajax({
       url: "/sendemail", // form action url
       type: "POST", // form submit method get/post
@@ -129,37 +125,70 @@ $("#submitButton").click(function (e) {
       data: dataObject, // serialize form data
 
       success: function (response) {
-        //$('#alert-msg').hide();
-        submit.html("<i class = 'fa fa-spinner fa-spin'></i> Sending...");
-        $('#contactForm :input').attr('disabled', 'disabled');
-         $('#contactForm').fadeTo("slow", 1, function () {
-        //     $('#contactForm').find(':input').attr('disabled', true);
-        //     $('#contactForm').find('label').css('cursor', 'default');
-        //     $('#success').fadeIn()
-        //     $('.modal').modal('hide');
-        //     $('#modal-success-header').html(response.responseHeader);
-        //     $('#modal-success-content').html(response.responseText);
-        //     $('#success').modal('show');
-             swal("Message has been sent", "", "success");
-             form.trigger('reset'); // reset form
-             submit.html("Send Message");// reset submit button text
-             $('#contactForm').find(':input').attr('disabled', false);
-
-         });
         console.log(response);
-        
+        const { responseHeader, responseText, status } = response;
+        if (status === 200) {
+          Swal.fire({
+            icon: "success",
+            title: responseHeader,
+            text: responseText,
+            showClass: {
+              popup: "animate__animated animate__fadeInDown",
+            },
+            hideClass: {
+              popup: "animate__animated animate__fadeOutUp",
+            },
+          });
+
+          $("#contactForm").fadeTo("slow", 1, function () {
+            form.trigger("reset"); // reset form
+            submit.html("Send Message"); // reset submit button text
+            $("#contactForm").find(":input").attr("disabled", false);
+          });
+        } else {
+          Swal.fire({
+            icon: "error",
+            title: responseHeader,
+            text: responseText,
+            showClass: {
+              popup: "animate__animated animate__fadeInDown",
+            },
+            hideClass: {
+              popup: "animate__animated animate__fadeOutUp",
+            },
+            confirmButtonColor: "#007bff",
+          });
+
+          $("#contactForm").fadeTo("slow", 1, function () {
+            form.trigger("reset"); // reset form
+            submit.html("Send Message"); // reset submit button text
+            $("#contactForm").find(":input").attr("disabled", false);
+          });
+        }
       },
       error: function () {
-         $('#contactForm').fadeTo("slow", 1, function () {
-        //     $('#error').fadeIn()
-        //     $('.modal').modal('hide');
-        //     $('#error').modal('show');
-             submit.html("Send Message");
-         });
+        Swal.fire({
+          icon: "error",
+          title: "Oops!",
+          text: "An error occured.",
+          showClass: {
+            popup: "animate__animated animate__fadeInDown",
+          },
+          hideClass: {
+            popup: "animate__animated animate__fadeOutUp",
+          },
+          customClass: "swal-wide",
+          confirmButtonColor: "#007bff",
+        });
+        $("#contactForm").fadeTo("slow", 1, function () {
+          form.trigger("reset"); // reset form
+          submit.html("Send Message"); // reset submit button text
+          $("#contactForm").find(":input").attr("disabled", false);
+        });
+        $("#contactForm").fadeTo("slow", 1, function () {
+          submit.html("Send Message");
+        });
       },
     });
   }
-
-  // $('#alert-msg').html("<p style='text-align:center' class='alert alert-danger'>Please fill in all the fields. All fields are required.</p>")
-  // validateForm();
 });
