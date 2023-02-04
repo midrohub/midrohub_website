@@ -1,5 +1,11 @@
 console.log("the script is properly referenced");
 
+document.getElementById("enrollButton").addEventListener("click", function() {
+  document.getElementById("subject").value = "Enrollment";
+  document.getElementById("message").value = "Hello, I would like to enroll in the MidroHub Academy Program.";
+});
+
+
 var alertFname = $("#alert-fname-msg"); // alert div for show alert message
 var alertLname = $("#alert-lname-msg"); // alert div for show alert message
 var alertEmail = $("#alert-email-msg"); // alert div for show alert message
