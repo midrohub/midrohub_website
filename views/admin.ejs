@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>MidroHub</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link
+      rel="shortcut icon"
+      href="images/icon.png"
+      type="image/x-icon"
+      style="border-radius: 50%"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="path/to/font-awesome/css/font-awesome.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="A.fonts,,_icomoon,,_style.css+css,,_bootstrap.min.css+css,,_jquery-ui.css+css,,_owl.carousel.min.css+css,,_owl.theme.default.min.css+css,,_owl.theme.default.min.css+css,,_jquery.fancybox.min.css+css,,_bootstrap-datepicker.css+fonts,,_flaticon,,_font,,_flaticon.css+css,,_aos.css+css,,_style.css,Mcc.faUyxTnwGX.css.pagespeed.cf.vWIv2UA6Oh.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <script nonce="875460fd-fdbd-4934-bcdd-eed0e50c349a">
+      (function (w, d) {
+        !(function (a, e, t, r) {
+          a.zarazData = a.zarazData || {};
+          a.zarazData.executed = [];
+          a.zaraz = {
+            deferred: [],
+          };
+          a.zaraz.q = [];
+          a.zaraz._f = function (e) {
+            return function () {
+              var t = Array.prototype.slice.call(arguments);
+              a.zaraz.q.push({
+                m: e,
+                a: t,
+              });
+            };
+          };
+          for (const e of ["track", "set", "ecommerce", "debug"])
+            a.zaraz[e] = a.zaraz._f(e);
+          a.zaraz.init = () => {
+            var t = e.getElementsByTagName(r)[0],
+              z = e.createElement(r),
+              n = e.getElementsByTagName("title")[0];
+            n && (a.zarazData.t = e.getElementsByTagName("title")[0].text);
+            a.zarazData.x = Math.random();
+            a.zarazData.w = a.screen.width;
+            a.zarazData.h = a.screen.height;
+            a.zarazData.j = a.innerHeight;
+            a.zarazData.e = a.innerWidth;
+            a.zarazData.l = a.location.href;
+            a.zarazData.r = e.referrer;
+            a.zarazData.k = a.screen.colorDepth;
+            a.zarazData.n = e.characterSet;
+            a.zarazData.o = new Date().getTimezoneOffset();
+            a.zarazData.q = [];
+            for (; a.zaraz.q.length; ) {
+              const e = a.zaraz.q.shift();
+              a.zarazData.q.push(e);
+            }
+            z.defer = !0;
+            for (const e of [localStorage, sessionStorage])
+              Object.keys(e || {})
+                .filter((a) => a.startsWith("_zaraz_"))
+                .forEach((t) => {
+                  try {
+                    a.zarazData["z_" + t.slice(7)] = JSON.parse(e.getItem(t));
+                  } catch {
+                    a.zarazData["z_" + t.slice(7)] = e.getItem(t);
+                  }
+                });
+            z.referrerPolicy = "origin";
+            z.src =
+              "/cdn-cgi/zaraz/s.js?z=" +
+              btoa(encodeURIComponent(JSON.stringify(a.zarazData)));
+            t.parentNode.insertBefore(z, t);
+          };
+          ["complete", "interactive"].includes(e.readyState)
+            ? zaraz.init()
+            : a.addEventListener("DOMContentLoaded", zaraz.init);
+        })(w, d, 0, "script");
+      })(window, document);
+    </script>
+    <script
+      src="https://kit.fontawesome.com/5da43224bf.js"
+      crossorigin="anonymous"
+    ></script>
+    <style></style>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+      integrity="sha512-c42qTSw/wPZ3/5LBzD+Bw5f7bSF2oxou6wEb+I/lqeaKV5FDIfMvvRp772y4jcJLKuGUOpbJMdg/BTl50fJYAw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.1.9/sweetalert2.min.css"
+      integrity="sha512-cyIcYOviYhF0bHIhzXWJQ/7xnaBuIIOecYoPZBgJHQKFPo+TOBA+BY1EnTpmM8yKDU4ZdI3UGccNGCEUdfbBqw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.1.9/sweetalert2.all.min.js"
+      integrity="sha512-IZ95TbsPTDl3eT5GwqTJH/14xZ2feLEGJRbII6bRKtE/HC6x3N4cHye7yyikadgAsuiddCY2+6gMntpVHL1gHw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <style>
+      .swal-wide {
+        width: 850px !important;
+      }
+      /* Responsiveness */
+      @media only screen and (min-width: 280px) and (max-width: 599px) {
+        .swal-wide {
+          width: 400px !important;
+        }
+        table .main {
+          max-width: 400px !important;
+        }
+      }
+    </style>
+  </head>
+
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+    <div id="overlayer"></div>
+    <div class="loader">
+      <div class="spinner-border text-primary" role="status">
+        <span class="sr-only">Loading...</span>
+      </div>
+    </div>
+    <div class="site-wrap">
+      <div class="site-mobile-menu site-navbar-target">
+        <div class="site-mobile-menu-header">
+          <div class="site-mobile-menu-close mt-3">
+            <span class="icon-close2 js-menu-toggle"></span>
+          </div>
+        </div>
+        <div class="site-mobile-menu-body"></div>
+      </div>
+      <header
+        class="site-navbar js-sticky-header site-navbar-target"
+        role="banner"
+      >
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-6 col-xl-2">
+              <div class="mb-0 site-logo" style="padding-top: 20px">
+                <a href="index.html" class="h2 mb-0"
+                  ><img src="images/logo.png" width="200px" />
+                </a>
+              </div>
+            </div>
+            <div class="col-12 col-md-10 d-none d-xl-block">
+              <nav
+                class="site-navigation position-relative text-right"
+                role="navigation"
+              >
+                <ul
+                  class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block"
+                >
+                  <li><a href="#home-section" class="nav-link">Home</a></li>
+                  <li class="has-children">
+                    <a href="#about-section" class="nav-link">About Us</a>
+                    <ul class="dropdown">
+                      <li><a href="#next" class="nav-link">Services</a></li>
+                      <li><a href="#team-section" class="nav-link">Team</a></li>
+                      <!-- <li>
+                        <a href="#gallery-section" class="nav-link">Gallery</a>
+                      </li> -->
+                    </ul>
+                  </li>
+                  <li class="has-children">
+                    <a href="#academy-section" class="nav-link">Academy</a>
+                    <ul class="dropdown">
+                      <li><a href="#ourtrack" class="nav-link">Tracks</a></li>
+                      <li>
+                        <a href="#review-section" class="nav-link">Reviews</a>
+                      </li>
+                      <!-- <li>
+                        <a href="#pricing-section" class="nav-link">Pricing</a>
+                      </li>                       -->
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#faq-section" class="nav-link">FAQ</a>
+                  </li>
+                  <li>
+                    <a href="#contact-section" class="nav-link">Contact</a>
+                  </li>
+                  <!-- <li class="social">
+                    <a href="tel:+234-817-253-5234" class="nav-link"
+                      ><span class="fa fa-phone" style="font-size: 15px;"></span
+                    ></a>
+                  </li>
+                  <li class="social">
+                    <a href="https://wa.me/2348172535234" class="nav-link"
+                      ><span class="fa fa-whatsapp"></span
+                    ></a>
+                  </li>
+                  <li class="social">
+                    <a href="https://twitter.com/midrohub" class="nav-link"
+                      ><span class="fa fa-twitter"></span
+                    ></a>
+                  </li>
+                  <li class="social">
+                    <a href="mailto:midrohub@gmail.com" class="nav-link"
+                      ><span class="fa fa-envelope"></span
+                    ></a>
+                  </li>
+                  <li class="social">
+                    <a href="https://www.instagram.com/midrohub/" class="nav-link"
+                      ><span class="fa fa-instagram"></span
+                    ></a>
+                  </li> -->
+                </ul>
+              </nav>
+            </div>
+            <div
+              class="col-6 d-inline-block d-xl-none ml-md-0 py-3"
+              style="position: relative; top: 3px"
+            >
+              <a href="#" class="site-menu-toggle js-menu-toggle float-right">
+                <!-- <span class="icon-menu h3"></span> -->
+                <i
+                  class="fa fa-bars"
+                  aria-hidden="true"
+                  style="font-size: 25px"
+                ></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div
+        class="site-blocks-cover overlay"
+        style="background-image: url(images/banner.jpg)"
+        data-aos="fade"
+        id="home-section"
+      >
+        <div class="container">
+          <div class="row align-items-center justify-content-center">
+            <div class="col-md-10 mt-lg-5 text-center">
+              <div class="single-text owl-carousel">
+                <div class="slide">
+                  <h1 class="text-uppercase" data-aos="fade-up">
+                    Welcome Admin
+                  </h1>
+                  <p class="mb-5 desc" data-aos="fade-up" data-aos-delay="100">
+                    Crafting Stunning Digital Experiences with Precision and
+                    Purpose.
+                  </p>
+                  <div data-aos="fade-up" data-aos-delay="100">
+                    <a
+                      href="#contact-section"
+                      class="btn btn-primary mr-2 mb-2 smoothscroll"
+                      style="scroll-behavior: smooth !important"
+                      >Get In Touch</a
+                    >
+                  </div>
+                </div>
+                <div class="slide">
+                  <h1 class="text-uppercase" data-aos="fade-up">
+                    Web Development
+                  </h1>
+                  <p class="mb-5 desc" data-aos="fade-up" data-aos-delay="100">
+                    Engineering Functionality and Elegance to Power Your Online
+                    Presence.
+                  </p>
+                  <div data-aos="fade-up" data-aos-delay="100">
+                    <a
+                      href="#contact-section"
+                      class="btn btn-primary mr-2 mb-2 smoothscroll"
+                      >Get In Touch</a
+                    >
+                  </div>
+                </div>
+                <div class="slide">
+                  <h1 class="text-uppercase" data-aos="fade-up">
+                    Technological Solutions
+                  </h1>
+                  <p class="mb-5 desc" data-aos="fade-up" data-aos-delay="100">
+                    Empowering Your Vision with Leading-Edge Technology.
+                  </p>
+                  <div data-aos="fade-up" data-aos-delay="100">
+                    <a
+                      href="#contact-section"
+                      class="btn btn-primary mr-2 mb-2 smoothscroll"
+                      >Get In Touch</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <a href="#next" class="mouse smoothscroll">
+          <span class="mouse-icon">
+            <span class="mouse-wheel"></span>
+          </span>
+        </a>
+      </div>
+
+      <section
+        class="site-section bg-light"
+        id="contact-section"
+        data-aos="fade"
+      >
+        <div class="container">
+          <div class="row mb-5">
+            <div class="col-12 text-center">
+              <h2 class="section-title mb-3">Send Newsletter</h2>
+            </div>
+          </div>
+          <div class="row mb-5">
+            <div class="col-md-4 text-center">
+              <p class="mb-4">
+                <span class="icon-room d-block h2 text-primary"></span>
+                <span
+                  >203 Fake St. Mountain View, San Francisco, California,
+                  USA</span
+                >
+              </p>
+            </div>
+            <div class="col-md-4 text-center">
+              <p class="mb-4">
+                <span class="fa fa-user fa-2x d-block text-primary mb-3">
+                  <%=count%></span
+                >
+                <a href="#">Subscribers</a>
+              </p>
+            </div>
+            <div class="col-md-4 text-center">
+              <p class="mb-0">
+                <span class="fa fa-envelope fa-2x d-block text-primary mb-3">
+                  0</span
+                >
+                <a href="#"
+                  ><span
+                    class="__cf_email__"
+                    data-cfemail="4930263c3b2c24282025092d2624282027672a2624"
+                    >Newsletters sent</span
+                  ></a
+                >
+              </p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12 mb-5">
+              <form action="#" class="p-5 bg-white" id="newsletterForm">
+                <h2 class="h4 text-black mb-5">Newsletter</h2>
+                <div class="row form-group">
+                  <div class="col-md-12">
+                    <label class="text-black" for="subject">Subject</label>
+                    <input
+                      type="text"
+                      id="subject"
+                      name="subject"
+                      class="form-control"
+                      placeholder="Write your subject here..."
+                    />
+                  </div>
+                </div>
+                <div class="row form-group">
+                  <div class="col-md-12">
+                    <label class="text-black" for="header">Header</label>
+                    <textarea
+                      name="header"
+                      id="header"
+                      cols="30"
+                      rows="7"
+                      class="form-control"
+                      placeholder="Write your header here..."
+                    ></textarea>
+                  </div>
+                </div>
+                <div class="row form-group">
+                  <div class="col-md-12">
+                    <label class="text-black" for="body">Body</label>
+                    <textarea
+                      name="body"
+                      id="body"
+                      cols="30"
+                      rows="7"
+                      class="form-control"
+                      placeholder="Write your body here..."
+                    ></textarea>
+                  </div>
+                </div>
+                <div class="row form-group">
+                  <div class="col-md-2">
+                    <input
+                      type="button"
+                      value="Preview"
+                      class="btn btn-primary btn-md text-white"
+                      id="previewBtn"
+                    />
+                    &nbsp;
+                  </div>
+                  <div class="col-md-2">
+                    <input
+                      type="button"
+                      id="sendBtn"
+                      value="Send Newsletter"
+                      class="btn btn-primary btn-md text-white"
+                    />
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- The Modal -->
+      <div id="myModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+          <div class="modal-header">
+            <span class="close">&times;</span>
+            <h2>Modal Header</h2>
+          </div>
+          <div class="modal-body">
+            <p>Some text in the Modal Body</p>
+            <p>Some other text...</p>
+          </div>
+          <div class="modal-footer">
+            <h3>Modal Footer</h3>
+          </div>
+        </div>
+      </div>
+      <footer class="site-footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-9">
+              <div class="row">
+                <div class="col-md-5">
+                  <h2 class="footer-heading mb-4">About Us</h2>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Neque facere laudantium magnam voluptatum autem. Amet
+                    aliquid nesciunt veritatis aliquam.
+                  </p>
+                </div>
+                <div class="col-md-3 ml-auto">
+                  <h2 class="footer-heading mb-4">Quick Links</h2>
+                  <ul class="list-unstyled">
+                    <li>
+                      <a href="#about-section" class="smoothscroll">Terms</a>
+                    </li>
+                    <li>
+                      <a href="#about-section" class="smoothscroll">Policy</a>
+                    </li>
+                    <li>
+                      <a href="#about-section" class="smoothscroll">About Us</a>
+                    </li>
+                    <li>
+                      <a href="#services-section" class="smoothscroll"
+                        >Services</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#testimonials-section" class="smoothscroll"
+                        >Testimonials</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#contact-section" class="smoothscroll"
+                        >Contact Us</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <div class="col-md-3 footer-social">
+                  <h2 class="footer-heading mb-4">Follow Us</h2>
+                  <a href="#" class="pl-0 pr-3"
+                    ><span class="icon-facebook"></span
+                  ></a>
+                  <a href="#" class="pl-3 pr-3"
+                    ><span class="icon-twitter"></span
+                  ></a>
+                  <a href="#" class="pl-3 pr-3"
+                    ><span class="icon-instagram"></span
+                  ></a>
+                  <a href="#" class="pl-3 pr-3"
+                    ><span class="icon-linkedin"></span
+                  ></a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <h2 class="footer-heading mb-4">Subscribe Newsletter</h2>
+              <form action="#" method="post" class="footer-subscribe">
+                <div class="input-group mb-3">
+                  <input
+                    type="text"
+                    class="form-control border-secondary text-white bg-transparent"
+                    placeholder="Enter Email"
+                    aria-label="Enter Email"
+                    aria-describedby="button-addon2"
+                  />
+                  <div class="input-group-append">
+                    <button
+                      class="btn btn-primary text-black"
+                      type="button"
+                      id="button-addon2"
+                    >
+                      Send
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="row pt-5 mt-5 text-center">
+            <div class="col-md-12">
+              <div class="border-top pt-5">
+                <p>
+                  Copyright &copy;
+                  <script
+                    data-cfasync="false"
+                    src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"
+                  ></script>
+                  <script>
+                    document.write(new Date().getFullYear());
+                  </script>
+                  All rights reserved | This template is made with
+                  <i class="icon-heart-o" aria-hidden="true"></i> by
+                  <a href="https://colorlib.com" target="_blank">Colorlib</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/custom.js"></script>
+    <script src="js/custom_admin.js"></script>
+    <script src="js/jquery-ui.js+popper.min.js.pagespeed.jc.F8k_35KFzQ.js"></script>
+    <script>
+      eval(mod_pagespeed_LCM_CQRMo6);
+    </script>
+    <script>
+      eval(mod_pagespeed_NfWQQvE5yL);
+    </script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/owl.carousel.min.js+jquery.countdown.min.js+jquery.easing.1.3.js+aos.js.pagespeed.jc.RDdrTxR7sk.js"></script>
+    <script>
+      eval(mod_pagespeed_RnExDc23yL);
+    </script>
+    <script>
+      eval(mod_pagespeed_pLn6lJbriN);
+    </script>
+    <script>
+      eval(mod_pagespeed_Lyw1PBgA03);
+    </script>
+    <script>
+      eval(mod_pagespeed_XW_cvtFvKE);
+    </script>
+    <script src="js/jquery.fancybox.min.js+jquery.sticky.js.pagespeed.jc.7isIXRQPXQ.js"></script>
+    <script>
+      eval(mod_pagespeed_IZ5t$0qFan);
+    </script>
+    <script>
+      eval(mod_pagespeed_Ag0ViBxeNX);
+    </script>
+    <script src="js/isotope.pkgd.min.js+main.js.pagespeed.jc.jj77B_MbD-.js"></script>
+    <script>
+      eval(mod_pagespeed_GYS0o2sTBz);
+    </script>
+    <script>
+      eval(mod_pagespeed_6NyU2Xvvnz);
+    </script>
+
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "UA-23581568-13");
+    </script>
+    <script
+      defer
+      src="https://static.cloudflareinsights.com/beacon.min.js/v652eace1692a40cfa3763df669d7439c1639079717194"
+      integrity="sha512-Gi7xpJR8tSkrpF7aordPZQlW2DLtzUlZcumS8dMQjwDHEnw9I7ZLyiOj/6tZStRBGtGgN6ceN6cMH8z7etPGlw=="
+      data-cf-beacon='{"rayId":"7389012c3b7efa44","token":"cd0b4b3a733644fc843ef0b185f98241","version":"2022.6.0","si":100}'
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

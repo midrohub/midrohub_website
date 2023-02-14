@@ -1,10 +1,10 @@
 console.log("the script is properly referenced");
 
-document.getElementById("enrollButton").addEventListener("click", function() {
+document.getElementById("enrollButton").addEventListener("click", function () {
   document.getElementById("subject").value = "Enrollment";
-  document.getElementById("message").value = "Hello, I would like to enroll in the MidroHub Academy Program.";
+  document.getElementById("message").value =
+    "Hello, I would like to enroll in the MidroHub Academy Program.";
 });
-
 
 var alertFname = $("#alert-fname-msg"); // alert div for show alert message
 var alertLname = $("#alert-lname-msg"); // alert div for show alert message
@@ -195,6 +195,119 @@ $("#submitButton").click(function (e) {
           submit.html("Send Message");
         });
       },
+    });
+  }
+});
+
+$("#subscribeButton").click(function (e) {
+  e.preventDefault();
+  $("#alert-msg").hide();
+  var form = $("#subscribeForm"); // contact form
+  var submit = $("#subscribeButton"); // submit button
+
+  email = $("#subemail").val();
+
+  var dataObject = {
+    email,
+  };
+
+  if (validateEmail(email)) {
+    submit.html("<i class = 'fa fa-spinner fa-spin'></i> Sending...");
+    $("#subscribeForm :input").attr("disabled", "disabled");
+    $.ajax({
+      url: "/subscribe", // form action url
+      type: "POST", // form submit method get/post
+      dataType: "json", // request type html/json/xml
+      data: dataObject, // serialize form data
+
+      success: function (response) {
+        console.log(response);
+        const { responseHeader, responseText, status } = response;
+        if (status === 200) {
+          Swal.fire({
+            icon: "success",
+            title: responseHeader,
+            text: responseText,
+            showClass: {
+              popup: "animate__animated animate__fadeInDown",
+            },
+            hideClass: {
+              popup: "animate__animated animate__fadeOutUp",
+            },
+          });
+
+          $("#subscribeForm").fadeTo("slow", 1, function () {
+            form.trigger("reset"); // reset form
+            submit.html("Send"); // reset submit button text
+            $("#subscribeForm").find(":input").attr("disabled", false);
+          });
+        } else {
+          Swal.fire({
+            icon: "error",
+            title: responseHeader,
+            text: responseText,
+            showClass: {
+              popup: "animate__animated animate__fadeInDown",
+            },
+            hideClass: {
+              popup: "animate__animated animate__fadeOutUp",
+            },
+            confirmButtonColor: "#007bff",
+          });
+
+          $("#subscribeForm").fadeTo("slow", 1, function () {
+            form.trigger("reset"); // reset form
+            submit.html("Send"); // reset submit button text
+            $("#subscribeForm").find(":input").attr("disabled", false);
+          });
+        }
+      },
+      error: function () {
+        Swal.fire({
+          icon: "error",
+          title: "Oops!",
+          text: "An error occured.",
+          showClass: {
+            popup: "animate__animated animate__fadeInDown",
+          },
+          hideClass: {
+            popup: "animate__animated animate__fadeOutUp",
+          },
+          customClass: "swal-wide",
+          confirmButtonColor: "#007bff",
+        });
+        $("#subscribeForm").fadeTo("slow", 1, function () {
+          form.trigger("reset"); // reset form
+          submit.html("Send"); // reset submit button text
+          $("#subscribeForm").find(":input").attr("disabled", false);
+        });
+        $("#subscribeForm").fadeTo("slow", 1, function () {
+          submit.html("Send");
+        });
+      },
+    });
+  }
+  else{
+    Swal.fire({
+      icon: "warning",
+      title: "Oops!",
+      text: "Please enter a valid email address",
+      showClass: {
+        popup: "animate__animated animate__fadeInDown",
+      },
+      hideClass: {
+        popup: "animate__animated animate__fadeOutUp",
+      },
+      customClass: "swal-wide",
+      confirmButtonColor: "#007bff",
+    });
+    $("#subscribeForm").fadeTo("slow", 1, function () {
+      form.trigger("reset"); // reset form
+      submit.html("Send"); // reset submit button text
+      $("#subscribeForm").find(":input").attr("disabled", false);
+    });
+    $("#subscribeForm").fadeTo("slow", 1, function () {
+      submit.html("Send");
     });
   }
 });

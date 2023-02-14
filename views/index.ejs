@@ -2042,7 +2042,7 @@
                     <span class="floating-label" data-v-6cb69558>Subject</span>
                     <span id="alert-subject-msg"></span>
                   </div>
-                  <div class="label-container" data-v-6cb69558><textarea id="message" name="message" cols="30" rows="2" class="textareaText" data-v-6cb69558></textarea>
+                  <div class="label-container" data-v-6cb69558><textarea id="message" name="message" class="textareaText" data-v-6cb69558></textarea>
                     <span class="floating-label" data-v-6cb69558>Message</span>
                     <span id="alert-message-msg"></span>
                   </div>
@@ -2122,20 +2122,22 @@
             </div>
             <div class="col-md-3">
               <h2 class="footer-heading mb-4">Subscribe Newsletter</h2>
-              <form action="#" method="post" class="footer-subscribe">
+              <form id="subscribeForm" class="footer-subscribe">
                 <div class="input-group mb-3">
                   <input
-                    type="text"
+                    type="email"
                     class="form-control border-secondary text-white bg-transparent"
                     placeholder="Enter Email"
                     aria-label="Enter Email"
                     aria-describedby="button-addon2"
+                    id="subemail"
+                    name="subemail"
                   />
                   <div class="input-group-append">
                     <button
                       class="btn btn-primary text-black"
-                      type="button"
-                      id="button-addon2"
+                      type="submit"
+                      id="subscribeButton"
                     >
                       Send
                     </button>
