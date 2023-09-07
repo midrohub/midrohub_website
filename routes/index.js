@@ -118,7 +118,8 @@ function acknowledge(clientName, clientEmail, myEmail, myPassword) {
         var htmlToSend = template(replacements);
 
         var MailOptions = {
-          from: "MidroHub" + '" <' + myEmail + ">",
+          // from: "MidroHub" + '" <' + myEmail + ">",
+          from: myEmail,
           to: clientEmail,
           bcc: process.env.ADMIN_GMAIL_USER,
           subject: "Thanks for contacting Midrohub",
@@ -129,7 +130,7 @@ function acknowledge(clientName, clientEmail, myEmail, myPassword) {
 
         transporter.sendMail(MailOptions, (error, info) => {
           if (error) {
-            console.log("error in transporter");
+            console.log("error in transporter " + error.message);
             return;
           } else {
             console.log("successful", info.messageId, info.response);
