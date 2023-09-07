@@ -1,24 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Finances &mdash; Website Template by Colorlib</title>
+    <title>MidroHub</title>
     <meta charset="utf-8" />
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
+    <link rel="shortcut icon" href="images/icon.png" type="image/x-icon" style="border-radius:50%">
+
     <link
       href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700"
       rel="stylesheet"
     />
+
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link
       rel="stylesheet"
       href="A.fonts,,_icomoon,,_style.css+css,,_bootstrap.min.css+css,,_jquery-ui.css+css,,_owl.carousel.min.css+css,,_owl.theme.default.min.css+css,,_owl.theme.default.min.css+css,,_jquery.fancybox.min.css+css,,_bootstrap-datepicker.css+fonts,,_flaticon,,_font,,_flaticon.css+css,,_aos.css+css,,_style.css,Mcc.faUyxTnwGX.css.pagespeed.cf.vWIv2UA6Oh.css"
     />
+
     <link
       rel="stylesheet"
       href="css/style.css"
     />
+    <link
+    rel="stylesheet"
+    href="css/aos.css"
+  />
+
     <script nonce="875460fd-fdbd-4934-bcdd-eed0e50c349a">
       (function (w, d) {
         !(function (a, e, t, r) {
@@ -82,8 +94,14 @@
         })(w, d, 0, "script");
       })(window, document);
     </script>
-  </head>
+    <script src="https://kit.fontawesome.com/5da43224bf.js" crossorigin="anonymous"></script>
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" integrity="sha512-c42qTSw/wPZ3/5LBzD+Bw5f7bSF2oxou6wEb+I/lqeaKV5FDIfMvvRp772y4jcJLKuGUOpbJMdg/BTl50fJYAw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.1.9/sweetalert2.min.css" integrity="sha512-cyIcYOviYhF0bHIhzXWJQ/7xnaBuIIOecYoPZBgJHQKFPo+TOBA+BY1EnTpmM8yKDU4ZdI3UGccNGCEUdfbBqw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.1.9/sweetalert2.all.min.js" integrity="sha512-IZ95TbsPTDl3eT5GwqTJH/14xZ2feLEGJRbII6bRKtE/HC6x3N4cHye7yyikadgAsuiddCY2+6gMntpVHL1gHw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  </head>
   <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
     <div id="overlayer"></div>
     <div class="loader">
@@ -95,7 +113,8 @@
       <div class="site-mobile-menu site-navbar-target">
         <div class="site-mobile-menu-header">
           <div class="site-mobile-menu-close mt-3">
-            <span class="icon-close2 js-menu-toggle"></span>
+            <!-- <span class="icon-close2 js-menu-toggle"></span> -->
+            <span class="fa fa-times js-menu-toggle" aria-hidden="true" style="font-size: 25px;"></span>
           </div>
         </div>
         <div class="site-mobile-menu-body"></div>
@@ -107,11 +126,11 @@
         <div class="container">
           <div class="row align-items-center">
             <div class="col-6 col-xl-2">
-              <h1 class="mb-0 site-logo">
-                <a href="index.html" class="h2 mb-0"
-                  >Finances<span class="text-primary">.</span>
+              <div class="mb-0 site-logo" style="padding-top: 20px;">
+                 <a href="index.html" class="h2 mb-0"
+                  ><img src="images/logo.png" width="200px">
                 </a>
-              </h1>
+              </div>
             </div>
             <div class="col-12 col-md-10 d-none d-xl-block">
               <nav
@@ -125,53 +144,55 @@
                   <li class="has-children">
                     <a href="#about-section" class="nav-link">About Us</a>
                     <ul class="dropdown">
+                      <li><a href="#next" class="nav-link">Services</a></li>
                       <li><a href="#team-section" class="nav-link">Team</a></li>
-                      <li>
-                        <a href="#pricing-section" class="nav-link">Pricing</a>
-                      </li>
-                      <li><a href="#faq-section" class="nav-link">FAQ</a></li>
-                      <li>
+                      <!-- <li>
                         <a href="#gallery-section" class="nav-link">Gallery</a>
-                      </li>
-                      <li>
-                        <a href="#services-section" class="nav-link"
-                          >Services</a
-                        >
-                      </li>
-                      <li>
-                        <a href="#testimonials-section" class="nav-link"
-                          >Testimonials</a
-                        >
-                      </li>
-                      <li class="has-children">
-                        <a href="#">More Links</a>
-                        <ul class="dropdown">
-                          <li><a href="#">Menu One</a></li>
-                          <li><a href="#">Menu Two</a></li>
-                          <li><a href="#">Menu Three</a></li>
-                        </ul>
-                      </li>
+                      </li> -->
+                    </ul>
+                    
+                  </li>
+                  <li class="has-children">
+                    <a href="#academy-section" class="nav-link">Academy</a>
+                    <ul class="dropdown">
+                      <li><a href="#ourtrack" class="nav-link">Tracks</a></li>
+                      <!-- <li><a href="#review-section" class="nav-link">Reviews</a></li> -->
+                      <!-- <li>
+                        <a href="#pricing-section" class="nav-link">Pricing</a>
+                      </li>                       -->
                     </ul>
                   </li>
-                  <li><a href="#blog-section" class="nav-link">Blog</a></li>
+                  <!-- <li>
+                    <a href="#faq-section" class="nav-link">FAQ</a>
+                  </li> -->
                   <li>
                     <a href="#contact-section" class="nav-link">Contact</a>
                   </li>
-                  <li class="social">
-                    <a href="#contact-section" class="nav-link"
-                      ><span class="icon-facebook"></span
+                  <!-- <li class="social">
+                    <a href="tel:+234-817-253-5234" class="nav-link"
+                      ><span class="fa fa-phone" style="font-size: 15px;"></span
                     ></a>
                   </li>
                   <li class="social">
-                    <a href="#contact-section" class="nav-link"
-                      ><span class="icon-twitter"></span
+                    <a href="https://wa.me/2348172535234" class="nav-link"
+                      ><span class="fa fa-whatsapp"></span
                     ></a>
                   </li>
                   <li class="social">
-                    <a href="#contact-section" class="nav-link"
-                      ><span class="icon-linkedin"></span
+                    <a href="https://x.com/midrohub" class="nav-link"
+                      ><span class="fa fa-twitter"></span
                     ></a>
                   </li>
+                  <li class="social">
+                    <a href="mailto:midrohub@gmail.com" class="nav-link"
+                      ><span class="fa fa-envelope"></span
+                    ></a>
+                  </li>
+                  <li class="social">
+                    <a href="https://www.instagram.com/midrohub/" class="nav-link"
+                      ><span class="fa fa-instagram"></span
+                    ></a>
+                  </li> -->
                 </ul>
               </nav>
             </div>
@@ -180,8 +201,11 @@
               style="position: relative; top: 3px"
             >
               <a href="#" class="site-menu-toggle js-menu-toggle float-right"
-                ><span class="icon-menu h3"></span
-              ></a>
+                >
+                <!-- <span class="icon-menu h3"></span> -->
+                <i class="fa fa-bars" aria-hidden="true" style="font-size: 25px;"></i>
+
+            </a>
             </div>
           </div>
         </div>
@@ -189,7 +213,7 @@
       <div
         class="site-blocks-cover overlay"
         style="
-          background-image: url(images/xhero_2.jpg.pagespeed.ic.xwJZ1gxNpO.webp);
+          background-image: url(images/banner3.jpg);
         "
         data-aos="fade"
         id="home-section"
@@ -200,58 +224,52 @@
               <div class="single-text owl-carousel">
                 <div class="slide">
                   <h1 class="text-uppercase" data-aos="fade-up">
-                    Banking Solutions
+                    Software Development
                   </h1>
                   <p class="mb-5 desc" data-aos="fade-up" data-aos-delay="100">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Repudiandae minima delectus accusamus accusantium deleniti
-                    libero excepturi porro illo.
+                    We create and maintain websites and web applications that meet your specific business needs.
                   </p>
                   <div data-aos="fade-up" data-aos-delay="100">
                     <a
-                      href="#"
-                      target="_blank"
-                      class="btn btn-primary mr-2 mb-2"
+                      href="#contact-section"
+                      class="btn btn-primary mr-2 mb-2 smoothscroll"
+                      style="scroll-behavior: smooth !important;"
+                      >Get In Touch</a
+                    >
+                  </div>
+                </div>
+                <div class="slide">
+                  <h1 class="text-uppercase " data-aos="fade-up">
+                    Innovative Solutions
+                  </h1>
+                  <p class="mb-5 desc" data-aos="fade-up" data-aos-delay="100">
+                    We leverage the latest advancements in artificial intelligence, machine learning, and data science to help businesses thrive in the digital age.
+                  </p>
+                  <div data-aos="fade-up" data-aos-delay="100">
+                    <a
+                      href="#contact-section"
+                      class="btn btn-primary mr-2 mb-2 smoothscroll"
                       >Get In Touch</a
                     >
                   </div>
                 </div>
                 <div class="slide">
                   <h1 class="text-uppercase" data-aos="fade-up">
-                    Financing Solutions
+                    Training And Consultancy
+                    <!-- Expert Coding Lessons -->
                   </h1>
                   <p class="mb-5 desc" data-aos="fade-up" data-aos-delay="100">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Repudiandae minima delectus accusamus accusantium deleniti
-                    libero excepturi porro illo.
+                    We provide expert guidance, knowledge, and skill development to empower your organization with cutting-edge technologies and strategies.
                   </p>
                   <div data-aos="fade-up" data-aos-delay="100">
                     <a
-                      href="#"
-                      target="_blank"
-                      class="btn btn-primary mr-2 mb-2"
+                      href="#contact-section"
+                      class="btn btn-primary mr-2 mb-2 smoothscroll"
                       >Get In Touch</a
                     >
                   </div>
                 </div>
-                <div class="slide">
-                  <h1 class="text-uppercase" data-aos="fade-up">
-                    Savings Accounts
-                  </h1>
-                  <p class="mb-5 desc" data-aos="fade-up" data-aos-delay="100">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Repudiandae minima delectus accusamus accusantium deleniti
-                    libero excepturi porro illo.
-                  </p>
-                  <div data-aos="fade-up" data-aos-delay="100">
-                    <a
-                      href="#"
-                      target="_blank"
-                      class="btn btn-primary mr-2 mb-2"
-                      >Get In Touch</a
-                    >
-                  </div>
-                </div>
+               
               </div>
             </div>
           </div>
@@ -274,8 +292,7 @@
                 About Us
               </h2>
               <p class="lead" data-aos="fade-up" data-aos-delay="100">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus
-                minima neque tempora reiciendis.
+                MidroHub is a dedicated network of software engineers, data scientists, product managers, and project managers that provide solutions to the problems of the world. We are a team of young and talented individuals who are passionate about technology and its impact on the world. 
               </p>
             </div>
           </div>
@@ -556,8 +573,8 @@
                   //]]>
                 </script>
                 <img
-                  src="images/ximg_2.jpg.pagespeed.ic.GIQoQH6W1t.webp"
-                  alt="Free Website Template by Free-Template.co"
+                  src="images/techsoln.jpg"
+                  alt="Tech Solution"
                   class="img-fluid"
                   data-pagespeed-url-hash="2111683793"
                   onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
@@ -569,17 +586,9 @@
               data-aos="fade-up"
               data-aos-delay="100"
             >
-              <h3 class="text-black mb-4">We Solve Your Financial Problem</h3>
+              <h3 class="text-black mb-4">We Solve Your Technological Problems</h3>
               <p>
-                Far far away, behind the word mountains, far from the countries
-                Vokalia and Consonantia, there live the blind texts. Separated
-                they live in Bookmarksgrove right at the coast of the Semantics,
-                a large language ocean.
-              </p>
-              <p>
-                A small river named Duden flows by their place and supplies it
-                with the necessary regelialia. It is a paradisematic country, in
-                which roasted parts of sentences fly into your mouth.
+                To make your ideas a reality, our group of highly capable and passionate freelance developers is committed to pushing the limits of technology. We partner with you every step of the way to ensure that your projects are delivered on time and within budget. We are driven to innovate and produce excellent results. Our knowledge and attention to detail can help you realize your idea, whether it be for a website, a mobile app, or a unique software solution. Join us in our quest to influence technology's future and make a positive difference in the world.
               </p>
             </div>
           </div>
@@ -594,16 +603,14 @@
               data-aos-delay=""
             >
               <img
-                src="images/flaticon-svg/svg/001-wallet.svg"
-                alt="Free Website Template by Free-Template.co"
+                src="images/frontend.png"
                 class="img-fluid w-25 mb-4"
                 data-pagespeed-url-hash="3646462428"
                 onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
               />
-              <h3 class="card-title">Money Savings</h3>
+              <h3 class="card-title">Frontend Development</h3>
               <p>
-                A small river named Duden flows by their place and supplies it
-                with the necessary regelialia.
+                We build responsive websites that are fast and easy to use. We use the latest technologies to build your website. 
               </p>
             </div>
             <div
@@ -612,16 +619,14 @@
               data-aos-delay="100"
             >
               <img
-                src="images/flaticon-svg/svg/004-cart.svg"
-                alt="Free Website Template by Free-Template.co"
+                src="images/backend.png"
                 class="img-fluid w-25 mb-4"
                 data-pagespeed-url-hash="2363730488"
                 onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
               />
-              <h3 class="card-title">Online Shoppings</h3>
+              <h3 class="card-title">Backend Development</h3>
               <p>
-                A small river named Duden flows by their place and supplies it
-                with the necessary regelialia.
+                We build backend systems that are fast and easy to use. We use the latest technologies to build your website. 
               </p>
             </div>
             <div
@@ -630,20 +635,66 @@
               data-aos-delay="200"
             >
               <img
-                src="images/flaticon-svg/svg/006-credit-card.svg"
-                alt="Free Website Template by Free-Template.co"
+                src="images/mobile.png"
                 class="img-fluid w-25 mb-4"
                 data-pagespeed-url-hash="2244605826"
                 onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
               />
-              <h3 class="card-title">Credit / Debit Cards</h3>
+              <h3 class="card-title">Mobile Development</h3>
               <p>
-                A small river named Duden flows by their place and supplies it
-                with the necessary regelialia.
+                We build mobile applications (Android and IOS) that are fast and easy to use. We use the latest technologies to build your website.
+              </p>
+            </div>
+            <div
+              class="col-md-4 text-center"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
+              <img
+                src="images/leader.png"
+                class="img-fluid w-25 mb-4"
+                data-pagespeed-url-hash="2244605826"
+                onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+              />
+              <h3 class="card-title">Project & Product Management</h3>
+              <p>
+                We bring your projects and products to market efficiently and effectively with seamless planning, precise execution, and expert management.
+              </p>
+            </div>
+            <div
+              class="col-md-4 text-center"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
+              <img
+                src="images/tutorial.png"
+                class="img-fluid w-25 mb-4"
+                data-pagespeed-url-hash="2244605826"
+                onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+              />
+              <h3 class="card-title">Private Programming Tutorial</h3>
+              <p>
+                We unlock your full potential as a programmer with our tailored, one-on-one private tutorials that offer personalized attention and expert guidance.
+              </p>
+            </div>
+                 <div
+              class="col-md-4 text-center"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
+              <img
+                src="images/ml2.png"
+                class="img-fluid w-25 mb-4"
+                data-pagespeed-url-hash="2244605826"
+                onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+              />
+              <h3 class="card-title">Machine Learning</h3>
+              <p>
+                We develop machine learning models and solutions tailored to specific client needs and train machine learning models using various algorithms and techniques.
               </p>
             </div>
           </div>
-          <div class="row">
+          <!-- <div class="row">
             <div class="col-lg-6 mb-5" data-aos="fade-up" data-aos-delay="">
               <figure class="circle-bg">
                 <img
@@ -670,14 +721,14 @@
                 </p>
               </div>
               <div class="mb-4">
-                <ul class="list-unstyled ul-check success">
-                  <li>Officia quaerat eaque neque</li>
-                  <li>Lorem ipsum dolor sit amet</li>
-                  <li>Consectetur adipisicing elit</li>
+                <ul class="fa-ul success">
+                  <li><span class="fa-li"><i class="fa fa-check" style='color:#71bc42' ></i></span> Officia quaerat eaque neque</li>
+                  <li><span class="fa-li"><i class="fa fa-check" style='color:#71bc42' ></i></span> Lorem ipsum dolor sit amet</li>
+                  <li><span class="fa-li"><i class="fa fa-check" style='color:#71bc42' ></i></span> Consectetur adipisicing elit</li>
                 </ul>
               </div>
             </div>
-          </div>
+          </div> -->
         </div>
       </div>
       <section class="site-section border-bottom" id="team-section">
@@ -692,12 +743,11 @@
                 Meet Team
               </h2>
               <p class="lead" data-aos="fade-up" data-aos-delay="100">
-                A small river named Duden flows by their place and supplies it
-                with the necessary regelialia.
+                Our team of developers, each with their own specialties and skill sets, work together to design strong, cutting-edge solutions that outperform expectations and generate results.
               </p>
             </div>
           </div>
-          <div class="row">
+          <div class="row" style="margin-left: 10%;">
             <div
               class="col-md-6 col-lg-4 mb-4"
               data-aos="fade-up"
@@ -705,31 +755,31 @@
             >
               <div class="team-member">
                 <figure>
-                  <ul class="social">
-                    <li>
-                      <a href="#"><span class="icon-facebook"></span></a>
-                    </li>
-                    <li>
-                      <a href="#"><span class="icon-twitter"></span></a>
-                    </li>
-                    <li>
-                      <a href="#"><span class="icon-linkedin"></span></a>
-                    </li>
-                    <li>
-                      <a href="#"><span class="icon-instagram"></span></a>
-                    </li>
-                  </ul>
+                  <div class="social">
+                      <a href="mailto:ogunderoayodeji@gmail.com"><i class="fa fa-envelope "></i></a>
+                   
+                      <a href="https://x.com/micheal__og"><i class="fa fa-twitter"></i></a>
+                   
+                      <a href="https://www.linkedin.com/in/micheal-ogundero-33641478/"><span class="fa fa-linkedin"></i></span></a>
+                   
+                      <a href="https://github.com/EngrMikolo"><span class="fa fa-github"></span></a>
+                  
+                      <a href="https://www.instagram.com/micheal__og/"><span class="fa fa-instagram"></span></a>
+                 
+                  </div>
+                  
                   <img
-                    src="images/xperson_1.jpg.pagespeed.ic.09Lu4Z5oU4.webp"
+                    src="images/micheal_ogundero.jpg"
                     alt="Image"
+                    
                     class="img-fluid"
                     data-pagespeed-url-hash="2735163746"
                     onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
                   />
                 </figure>
                 <div class="p-3">
-                  <h3>Kaiara Spencer</h3>
-                  <span class="position">Accountant</span>
+                  <h3>Micheal Ogundero</h3>
+                  <span class="position">Founder</span>
                 </div>
               </div>
             </div>
@@ -740,35 +790,193 @@
             >
               <div class="team-member">
                 <figure>
-                  <ul class="social">
-                    <li>
-                      <a href="#"><span class="icon-facebook"></span></a>
-                    </li>
-                    <li>
-                      <a href="#"><span class="icon-twitter"></span></a>
-                    </li>
-                    <li>
-                      <a href="#"><span class="icon-linkedin"></span></a>
-                    </li>
-                    <li>
-                      <a href="#"><span class="icon-instagram"></span></a>
-                    </li>
-                  </ul>
+                  <div class="social">
+                    <!-- <li> -->
+                      <a href="mailto:contact.temitoyosi@gmail.com"><span class="fa fa-envelope"></span></a>
+                    <!-- </li> -->
+                    <!-- <li>
+                      <a href="https://www.x.com/thebutterrfly"><span class="fa fa-twitter"></span></a>
+                    </li> -->
+                    <!-- <li> -->
+                      <a href="https://www.linkedin.com/in/temitoyosi-osibemekun-677b261a0/"><span class="fa fa-linkedin"></span></a>
+                    <!-- </li> -->
+                    <!-- <li> -->
+                      <a href="https://www.github.com/warythebutterfly"><span class="fa fa-github"></span></a>
+                    <!-- </li> -->
+                    <!-- <li>
+                      <a href="https://www.instagram.com/the.butterrfly"><span class="fa fa-instagram"></span></a>
+                    </li> -->
+                  </div>
                   <img
-                    src="images/xperson_2.jpg.pagespeed.ic.4_-d6AKMp2.webp"
+                    src="images/yosi.jpg"
                     alt="Image"
+                    height="280px"
                     class="img-fluid"
                     data-pagespeed-url-hash="3029663667"
                     onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
                   />
                 </figure>
                 <div class="p-3">
-                  <h3>Dave Simpson</h3>
-                  <span class="position">Bank Teller</span>
+                  <h3>Temitoyosi Osibemekun</h3>
+                  <span class="position">Software Engineer</span>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="col-md-6 col-lg-4 mb-4"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
+              <div class="team-member">
+                <figure>
+                  <div class="social">
+                    <!-- <li> -->
+                      <a href="mailto:raheemabdulhaqq2020@gmail.com"><span class="fa fa-envelope"></span></a>
+                    <!-- </li> -->
+                    <!-- <li> -->
+                      <a href="https://x.com/Abdulhaq_Raheem"><span class="fa fa-twitter"></span></a>
+                    <!-- </li>
+                    <li> -->
+                      <a href="https://www.linkedin.com/in/raheem-abdulhaqq-7967aa221?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3B7H1aF3ZfTNi%2BesQzMJAeQw%3D%3D"><span class="fa fa-linkedin"></span></a>
+                    <!-- </li>
+                    <li> -->
+                      <a href="https://github.com/raheemAbdulhaqq"><span class="fa fa-github"></span></a>
+                    <!-- </li>
+                    <li> -->
+                      <a href="https://www.instagram.com/raheemabdulhaqq/"><span class="fa fa-instagram"></span></a>
+                    <!-- </li> -->
+                    </div>
+                  <img
+                    src="images/raheem.jpg"
+                    alt="Image"
+                    height="280px"
+                    class="img-fluid"
+                    data-pagespeed-url-hash="3324163588"
+                    onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+                  />
+                </figure>
+                <div class="p-3">
+                  <h3>Raheem Abdulhaqq</h3>
+                  <span class="position">Software Engineer</span>
                 </div>
               </div>
             </div>
             <div
+            class="col-md-6 col-lg-4 mb-4"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <div class="team-member">
+              <figure>
+                <div class="social">
+                  <!-- <li> -->
+                    <a href="mailto:Demiladeakintewe@gmail.com"><span class="fa fa-envelope"></span></a>
+                  <!-- </li>
+                  <li> -->
+                    <a href="https://x.com/_demilad"><span class="fa fa-twitter"></span></a>
+                  <!-- </li>
+                  <li> -->
+                    <a href="https://www.instagram.com/demiilade_/"><span class="fa fa-instagram"></span></a>
+                  <!-- </li> -->
+                  </div>
+                <img
+                  src="images/demilade.jpeg"
+                  alt="Image"
+                  height="280px"
+                  class="img-fluid"
+                  data-pagespeed-url-hash="3324163588"
+                  onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+                />
+              </figure>
+              <div class="p-3">
+                <h3>Oluwademilade Akintewe </h3>
+                <span class="position">Project Manager</span>
+              </div>
+            </div>
+          </div>
+
+          <div
+          class="col-md-6 col-lg-4 mb-4"
+          data-aos="fade-up"
+          data-aos-delay="200"
+        >
+          <div class="team-member">
+            <figure>
+              <div class="social">
+                <!-- <li> -->
+                  <a href="mailto:precious.michael2002@gmail.com"><span class="fa fa-envelope"></span></a>
+                <!-- </li>
+                <li> -->
+                  <a href="https://x.com/eyizomorihi_"><span class="fa fa-twitter"></span></a>
+                <!-- </li>
+                <li> -->
+                  <a href="https://www.linkedin.com/in/precious-michael/"><span class="fa fa-linkedin"></span></a>
+                <!-- </li>
+                <li> -->
+                  <a href="https://github.com/Eyiza"><span class="fa fa-github"></span></a>
+                <!-- </li>
+                <li> -->
+                  <a href="https://www.instagram.com/mi_rah_"><span class="fa fa-instagram"></span></a>
+                <!-- </li> -->
+                </div>
+              <img
+                src="images/precious.jpeg"
+                alt="Image"
+                height="280px"
+                class="img-fluid"
+                data-pagespeed-url-hash="3324163588"
+                onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+              />
+            </figure>
+            <div class="p-3">
+              <h3>Precious Michael</h3>
+              <span class="position">Software Engineer</span>
+            </div>
+          </div>
+        </div>
+            <div
+              class="col-md-6 col-lg-4 mb-4"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
+              <div class="team-member">
+                <figure>
+                  <div class="social">
+                    <!-- <li> -->
+                      <a href="mailto:akinteweabimbola19@gmail.com"><span class="fa fa-envelope"></span></a>
+                    <!-- </li>
+                    <li> -->
+                      <a href="https://x.com/abimbola_ab"><span class="fa fa-twitter"></span></a>
+                    <!-- </li>
+                    <li> -->
+                      <a href="https://www.linkedin.com/in/abimbola-akintewe-76036a236"><span class="fa fa-linkedin"></span></a>
+                    <!-- </li>
+                    <li> -->
+                      <a href="https://www.instagram.com/_abimbola.a/"><span class="fa fa-instagram"></span></a>
+                    <!-- </li> -->
+                    </div>
+                  <img
+                    src="images/bimbo.jpeg"
+                    alt="Image"
+                    height="280px"
+                    class="img-fluid"
+                    data-pagespeed-url-hash="3324163588"
+                    onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+                  />
+                </figure>
+                <div class="p-3">
+                  <h3>Abimbola Akintewe</h3>
+                  <span class="position">Project Manager</span>
+                </div>
+              </div>
+            </div>
+
+           
+
+           
+
+            <!-- <div
               class="col-md-6 col-lg-4 mb-4"
               data-aos="fade-up"
               data-aos-delay="200"
@@ -777,49 +985,96 @@
                 <figure>
                   <ul class="social">
                     <li>
-                      <a href="#"><span class="icon-facebook"></span></a>
+                      <a href="mailto:kofoworola.stephanie@gmail.com"><span class="fa fa-envelope"></span></a>
                     </li>
                     <li>
-                      <a href="#"><span class="icon-twitter"></span></a>
+                      <a href="https://x.com/StephTheIcon"><span class="fa fa-twitter"></span></a>
                     </li>
                     <li>
-                      <a href="#"><span class="icon-linkedin"></span></a>
+                      <a href="https://www.linkedin.com/in/kofoworola-ayodele-608656199"><span class="fa fa-linkedin"></span></a>
                     </li>
                     <li>
-                      <a href="#"><span class="icon-instagram"></span></a>
+                      <a href="https://github.com/kofoworolastephanie"><span class="fa fa-github"></span></a>
+                    </li>
+                    <li>
+                      <a href="https://www.instagram.com/Darkcherry_/"><span class="fa fa-instagram"></span></a>
                     </li>
                   </ul>
                   <img
-                    src="images/xperson_3.jpg.pagespeed.ic.zlEu_j4tsP.webp"
+                    src="images/kofo.jfif"
                     alt="Image"
+                    height="280px"
                     class="img-fluid"
                     data-pagespeed-url-hash="3324163588"
                     onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
                   />
                 </figure>
                 <div class="p-3">
-                  <h3>Ben Thompson</h3>
-                  <span class="position">Bank Teller</span>
+                  <h3>Kofoworola Ayodele</h3>
+                  <span class="position">Software Engineer Intern</span>
                 </div>
               </div>
-            </div>
+            </div> -->
+
+            <!-- <div
+              class="col-md-6 col-lg-4 mb-4"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
+              <div class="team-member">
+                <figure>
+                  <ul class="social">
+                    <li>
+                      <a href="mailto:fatimatyewandewahab@gmail.com"><span class="fa fa-envelope"></span></a>
+                    </li>
+                    <li>
+                      <a href="https://x.com/phatimatwahab20?t=0QE-gKyllGQEVEr79Zkigg&s=08"><span class="fa fa-twitter"></span></a>
+                    </li>
+                    <li>
+                      <a href="https://www.linkedin.com/in/fatimat-wahab-070491b7"><span class="fa fa-linkedin"></span></a>
+                    </li>
+                    <li>
+                      <a href="https://github.com/Fatimabiola"><span class="fa fa-github"></span></a>
+                    </li>
+                    <li>
+                      <a href="https://www.instagram.com/fatima_abiola_wahab/"><span class="fa fa-instagram"></span></a>
+                    </li>
+                  </ul>
+                  <img
+                    src="images/abiola.jpeg"
+                    alt="Image"
+                    height="280px"
+                    class="img-fluid"
+                    data-pagespeed-url-hash="3324163588"
+                    onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+                  />
+                </figure>
+                <div class="p-3">
+                  <h3>Fatima Wahab</h3>
+                  <span class="position">Software Engineer Intern</span>
+                </div>
+              </div>
+            </div> -->
           </div>
+         
         </div>
       </section>
-      <section class="site-section" id="gallery-section" data-aos="fade">
+
+      
+      <!-- <section class="site-section" id="gallery-section" data-aos="fade">
         <div class="container">
           <div class="row mb-3">
             <div class="col-12 text-center">
-              <h2 class="section-title mb-3">Gallery</h2>
+              <h2 class="section-title mb-3">Some of our works</h2>
             </div>
           </div>
           <div id="posts" class="row no-gutter">
             <div class="item web col-sm-6 col-md-4 col-lg-4 col-xl-3 mb-4">
-              <a href="images/img_1.jpg" class="item-wrap fancybox">
-                <span class="icon-search2"></span>
+              <a href="images/allocator.png" class="item-wrap fancybox">
+                <span ><i class="fa fa-search"></i></span>
                 <img
                   class="img-fluid"
-                  src="images/ximg_1.jpg.pagespeed.ic.oH8LMy_2zQ.webp"
+                  src="images/allocator.png"
                   data-pagespeed-url-hash="1817183872"
                   onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
                 />
@@ -827,14 +1082,14 @@
             </div>
             <div class="item web col-sm-6 col-md-4 col-lg-4 col-xl-3 mb-4">
               <a
-                href="images/img_2.jpg"
+                href="images/allocatorindex.png"
                 class="item-wrap fancybox"
                 data-fancybox="gallery2"
               >
-                <span class="icon-search2"></span>
+                <span><i class="fa fa-search"></i></span>
                 <img
                   class="img-fluid"
-                  src="images/ximg_2.jpg.pagespeed.ic.GIQoQH6W1t.webp"
+                  src="images/allocatorindex.png"
                   data-pagespeed-url-hash="2111683793"
                   onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
                 />
@@ -842,89 +1097,14 @@
             </div>
             <div class="item brand col-sm-6 col-md-4 col-lg-4 col-xl-3 mb-4">
               <a
-                href="images/img_3.jpg"
+                href="images/cervitech.png"
                 class="item-wrap fancybox"
                 data-fancybox="gallery2"
               >
-                <span class="icon-search2"></span>
+                <span><i class="fa fa-search"></i></span>
                 <img
                   class="img-fluid"
-                  src="images/ximg_3.jpg.pagespeed.ic.l4ZsUm3UWN.webp"
-                  data-pagespeed-url-hash="2406183714"
-                  onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
-                />
-              </a>
-            </div>
-            <div class="item design col-sm-6 col-md-4 col-lg-4 col-xl-3 mb-4">
-              <a
-                href="images/img_4.jpg"
-                class="item-wrap fancybox"
-                data-fancybox="gallery2"
-              >
-                <span class="icon-search2"></span>
-                <img
-                  class="img-fluid"
-                  src="images/ximg_4.jpg.pagespeed.ic.VOw6lZM61y.webp"
-                  data-pagespeed-url-hash="2700683635"
-                  onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
-                />
-              </a>
-            </div>
-            <div class="item web col-sm-6 col-md-4 col-lg-4 col-xl-3 mb-4">
-              <a
-                href="images/img_5.jpg"
-                class="item-wrap fancybox"
-                data-fancybox="gallery2"
-              >
-                <span class="icon-search2"></span>
-                <img
-                  class="img-fluid"
-                  src="images/ximg_5.jpg.pagespeed.ic.B0ZdXvviCp.webp"
-                  data-pagespeed-url-hash="2995183556"
-                  onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
-                />
-              </a>
-            </div>
-            <div class="item brand col-sm-6 col-md-4 col-lg-4 col-xl-3 mb-4">
-              <a
-                href="images/img_1.jpg"
-                class="item-wrap fancybox"
-                data-fancybox="gallery2"
-              >
-                <span class="icon-search2"></span>
-                <img
-                  class="img-fluid"
-                  src="images/ximg_1.jpg.pagespeed.ic.oH8LMy_2zQ.webp"
-                  data-pagespeed-url-hash="1817183872"
-                  onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
-                />
-              </a>
-            </div>
-            <div class="item web col-sm-6 col-md-4 col-lg-4 col-xl-3 mb-4">
-              <a
-                href="images/img_2.jpg"
-                class="item-wrap fancybox"
-                data-fancybox="gallery2"
-              >
-                <span class="icon-search2"></span>
-                <img
-                  class="img-fluid"
-                  src="images/ximg_2.jpg.pagespeed.ic.GIQoQH6W1t.webp"
-                  data-pagespeed-url-hash="2111683793"
-                  onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
-                />
-              </a>
-            </div>
-            <div class="item design col-sm-6 col-md-4 col-lg-4 col-xl-3 mb-4">
-              <a
-                href="images/img_3.jpg"
-                class="item-wrap fancybox"
-                data-fancybox="gallery2"
-              >
-                <span class="icon-search2"></span>
-                <img
-                  class="img-fluid"
-                  src="images/ximg_3.jpg.pagespeed.ic.l4ZsUm3UWN.webp"
+                  src="images/cervitech.png"
                   data-pagespeed-url-hash="2406183714"
                   onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
                 />
@@ -932,29 +1112,14 @@
             </div>
             <div class="item web col-sm-6 col-md-4 col-lg-4 col-xl-3 mb-4">
               <a
-                href="images/img_4.jpg"
+                href="images/cervitechapp.png"
                 class="item-wrap fancybox"
                 data-fancybox="gallery2"
               >
-                <span class="icon-search2"></span>
+                <span><i class="fa fa-search"></i></span>
                 <img
                   class="img-fluid"
-                  src="images/ximg_4.jpg.pagespeed.ic.VOw6lZM61y.webp"
-                  data-pagespeed-url-hash="2700683635"
-                  onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
-                />
-              </a>
-            </div>
-            <div class="item design col-sm-6 col-md-4 col-lg-4 col-xl-3 mb-4">
-              <a
-                href="images/img_5.jpg"
-                class="item-wrap fancybox"
-                data-fancybox="gallery2"
-              >
-                <span class="icon-search2"></span>
-                <img
-                  class="img-fluid"
-                  src="images/ximg_5.jpg.pagespeed.ic.B0ZdXvviCp.webp"
+                  src="images/cervitechapp.png"
                   data-pagespeed-url-hash="2995183556"
                   onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
                 />
@@ -962,38 +1127,129 @@
             </div>
             <div class="item brand col-sm-6 col-md-4 col-lg-4 col-xl-3 mb-4">
               <a
-                href="images/img_1.jpg"
+                href="images/cervitechweb.jpg"
                 class="item-wrap fancybox"
                 data-fancybox="gallery2"
               >
-                <span class="icon-search2"></span>
+                <span><i class="fa fa-search"></i></span>
                 <img
                   class="img-fluid"
-                  src="images/ximg_1.jpg.pagespeed.ic.oH8LMy_2zQ.webp"
+                  src="images/cervitechweb.jpg"
                   data-pagespeed-url-hash="1817183872"
                   onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
                 />
               </a>
             </div>
-            <div class="item design col-sm-6 col-md-4 col-lg-4 col-xl-3 mb-4">
+            <div class="item brand col-sm-6 col-md-4 col-lg-4 col-xl-3 mb-4">
               <a
-                href="images/img_2.jpg"
+                href="images/stapp5.jpg"
                 class="item-wrap fancybox"
                 data-fancybox="gallery2"
               >
-                <span class="icon-search2"></span>
+                <span><i class="fa fa-search"></i></span>
                 <img
                   class="img-fluid"
-                  src="images/ximg_2.jpg.pagespeed.ic.GIQoQH6W1t.webp"
-                  data-pagespeed-url-hash="2111683793"
+                  src="images/stapp5.jpg"
+                  data-pagespeed-url-hash="1817183872"
+                  onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+                />
+              </a>
+            </div>
+            <div class="item brand col-sm-6 col-md-4 col-lg-4 col-xl-3 mb-4">
+              <a
+                href="images/stapp.png"
+                class="item-wrap fancybox"
+                data-fancybox="gallery2"
+              >
+                <span><i class="fa fa-search"></i></span>
+                <img
+                  class="img-fluid"
+                  src="images/stapp.png"
+                  data-pagespeed-url-hash="1817183872"
+                  onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+                />
+              </a>
+            </div>
+            <div class="item brand col-sm-6 col-md-4 col-lg-4 col-xl-3 mb-4">
+              <a
+                href="images/stapp3.png"
+                class="item-wrap fancybox"
+                data-fancybox="gallery2"
+              >
+                <span><i class="fa fa-search"></i></span>
+                <img
+                  class="img-fluid"
+                  src="images/stapp3.png"
+                  data-pagespeed-url-hash="1817183872"
+                  onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+                />
+              </a>
+            </div>
+            <div class="item brand col-sm-6 col-md-4 col-lg-4 col-xl-3 mb-4">
+              <a
+                href="images/stapp2.jpg"
+                class="item-wrap fancybox"
+                data-fancybox="gallery2"
+              >
+                <span><i class="fa fa-search"></i></span>
+                <img
+                  class="img-fluid"
+                  src="images/stapp2.jpg"
+                  data-pagespeed-url-hash="1817183872"
+                  onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+                />
+              </a>
+            </div>
+            <div class="item brand col-sm-6 col-md-4 col-lg-4 col-xl-3 mb-4">
+              <a
+                href="images/stapp4.png"
+                class="item-wrap fancybox"
+                data-fancybox="gallery2"
+              >
+                <span><i class="fa fa-search"></i></span>
+                <img
+                  class="img-fluid"
+                  src="images/stapp4.png"
+                  data-pagespeed-url-hash="1817183872"
+                  onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+                />
+              </a>
+            </div>
+            <div class="item brand col-sm-6 col-md-4 col-lg-4 col-xl-3 mb-4">
+              <a
+                href="images/zka2.jpg"
+                class="item-wrap fancybox"
+                data-fancybox="gallery2"
+              >
+                <span><i class="fa fa-search"></i></span>
+                <img
+                  class="img-fluid"
+                  src="images/zka2.jpg"
+                  data-pagespeed-url-hash="1817183872"
+                  onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+                />
+              </a>
+            </div>
+            <div class="item brand col-sm-6 col-md-4 col-lg-4 col-xl-3 mb-4">
+              <a
+                href="images/zka.jpg"
+                class="item-wrap fancybox"
+                data-fancybox="gallery2"
+              >
+                <span><i class="fa fa-search"></i></span>
+                <img
+                  class="img-fluid"
+                  src="images/zka.jpg"
+                  data-pagespeed-url-hash="1817183872"
                   onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
                 />
               </a>
             </div>
           </div>
         </div>
-      </section>
-      <section class="site-section">
+      </section> -->
+
+      <!-- <section class="site-section">
         <div class="container">
           <div class="row mb-5 justify-content-center">
             <div class="col-md-7 text-center">
@@ -1021,7 +1277,7 @@
                   onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
                 />
                 <img
-                  src="images/ximg_2.jpg.pagespeed.ic.GIQoQH6W1t.webp"
+                  src="images/banner.jpg"
                   alt="Image"
                   class="img-fluid"
                   data-pagespeed-url-hash="2111683793"
@@ -1037,9 +1293,9 @@
               </div>
               <div class="custom-direction">
                 <a href="#" class="custom-prev"
-                  ><span><span class="icon-keyboard_backspace"></span></span></a
+                  ><span><i class="fa fa-arrow-left"></i></span></a
                 ><a href="#" class="custom-next"
-                  ><span><span class="icon-keyboard_backspace"></span></span
+                  ><span><i class="fa fa-arrow-right"></i></span
                 ></a>
               </div>
             </div>
@@ -1085,18 +1341,180 @@
             </div>
           </div>
         </div>
-      </section>
+      </section> -->
+
       <section
         class="site-section border-bottom bg-light"
-        id="services-section"
+        id="academy-section"
       >
         <div class="container">
           <div class="row mb-5">
             <div class="col-12 text-center" data-aos="fade">
-              <h2 class="section-title mb-3">Our Services</h2>
+              <h2 class="section-title mb-3">MidroHub Academy</h2>
+              <p class="lead" data-aos="fade-up" data-aos-delay="100">
+                In MidroHub Academy, We cover the following areas              
+              </p>
             </div>
           </div>
-          <div class="row align-items-stretch">
+          <div id="ourtrack">
+            <div>
+              <div>
+                <div>
+                  <div>
+                    <div>
+                      <span>
+                        <img src="images/html-5.png" alt="HTML" height="40" width="35">
+                        <!-- <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" color="#623D92" height="25" width="25" xmlns="http://www.w3.org/2000/svg" style="color: #007bff;">
+                          <path d="M20 2H10c-1.103 0-2 .897-2 2v4H4c-1.103 0-2 .897-2 2v10c0 1.103.897 2 2 2h10c1.103 0 2-.897 2-2v-4h4c1.103 0 2-.897 2-2V4c0-1.103-.897-2-2-2zM4 20V10h10l.002 10H4zm16-6h-4v-4c0-1.103-.897-2-2-2h-4V4h10v10z">
+                          </path>
+                        </svg> -->
+                      </span>
+                      <span>
+                        <p>HTML</p>
+                      </span>
+                    </div>
+                  </div>
+
+                  <div class="sc-bZkfAO jIRgRX">
+                    <div class="sc-kLLXSd cefBcv">
+                      <span>
+                        <!-- <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" color="#623D92" height="25" width="25" xmlns="http://www.w3.org/2000/svg" style="color: #007bff;">
+                          <path d="M20 2H10c-1.103 0-2 .897-2 2v4H4c-1.103 0-2 .897-2 2v10c0 1.103.897 2 2 2h10c1.103 0 2-.897 2-2v-4h4c1.103 0 2-.897 2-2V4c0-1.103-.897-2-2-2zM4 20V10h10l.002 10H4zm16-6h-4v-4c0-1.103-.897-2-2-2h-4V4h10v10z">
+                          </path>
+                        </svg> -->
+                        <img src="images/CSS3_logo.png" alt="CSS" height="40" width="25">
+                      </span>
+                      <span>
+                        <p>CSS</p>
+                      </span>
+                    </div>
+                  </div>
+                                    
+                  <div class="sc-bZkfAO jIRgRX">
+                    <div class="sc-kLLXSd cefBcv">
+                      <span>
+                        <!-- <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" color="#623D92" height="25" width="25" xmlns="http://www.w3.org/2000/svg" style="color: #007bff;">
+                          <path d="M20 2H10c-1.103 0-2 .897-2 2v4H4c-1.103 0-2 .897-2 2v10c0 1.103.897 2 2 2h10c1.103 0 2-.897 2-2v-4h4c1.103 0 2-.897 2-2V4c0-1.103-.897-2-2-2zM4 20V10h10l.002 10H4zm16-6h-4v-4c0-1.103-.897-2-2-2h-4V4h10v10z"></path>
+                        </svg> -->
+                        <img src="images/jslogo.png" alt="JS" height="40" width="35">
+                      </span>
+                      <span>
+                        <p>JavaScript</p>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <div class="sc-bZkfAO jIRgRX">
+                    <div class="sc-kLLXSd cefBcv">
+                      <span>
+                        <!-- <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" color="#623D92" height="25" width="25" xmlns="http://www.w3.org/2000/svg" style="color: #007bff;">
+                          <path d="M20 2H10c-1.103 0-2 .897-2 2v4H4c-1.103 0-2 .897-2 2v10c0 1.103.897 2 2 2h10c1.103 0 2-.897 2-2v-4h4c1.103 0 2-.897 2-2V4c0-1.103-.897-2-2-2zM4 20V10h10l.002 10H4zm16-6h-4v-4c0-1.103-.897-2-2-2h-4V4h10v10z"></path>
+                        </svg> -->
+                        <img src="images/sql.png" alt="SQL" height="40" width="40">
+                      </span>
+                      <span>
+                        <p>SQL</p>
+                      </span>
+                    </div>
+                  </div>
+                  <div class="sc-bZkfAO jIRgRX">
+                    <div class="sc-kLLXSd cefBcv">
+                      <span>
+                        <!-- <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" color="#623D92" height="25" width="25" xmlns="http://www.w3.org/2000/svg" style="color: #007bff;">
+                          <path d="M20 2H10c-1.103 0-2 .897-2 2v4H4c-1.103 0-2 .897-2 2v10c0 1.103.897 2 2 2h10c1.103 0 2-.897 2-2v-4h4c1.103 0 2-.897 2-2V4c0-1.103-.897-2-2-2zM4 20V10h10l.002 10H4zm16-6h-4v-4c0-1.103-.897-2-2-2h-4V4h10v10z"></path>
+                        </svg> -->
+                        <img src="images/git.png" alt="GIT" height="40" width="40" style="border-radius: 50%;">
+                      </span>
+                      <span>
+                        <p>Git</p>
+                      </span>
+                    </div>
+                  </div>
+                  <div class="sc-bZkfAO jIRgRX">
+                    <div class="sc-kLLXSd cefBcv">
+                      <span>
+                        <!-- <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" color="#623D92" height="25" width="25" xmlns="http://www.w3.org/2000/svg" style="color: #007bff;">
+                          <path d="M20 2H10c-1.103 0-2 .897-2 2v4H4c-1.103 0-2 .897-2 2v10c0 1.103.897 2 2 2h10c1.103 0 2-.897 2-2v-4h4c1.103 0 2-.897 2-2V4c0-1.103-.897-2-2-2zM4 20V10h10l.002 10H4zm16-6h-4v-4c0-1.103-.897-2-2-2h-4V4h10v10z"></path>
+                        </svg> -->
+                        <img src="images/atom.png" alt="React" height="40" width="40">
+                      </span>
+                      <span>
+                        <p>ReactJS</p>
+                      </span>
+                    </div>
+                  </div>
+                  <div class="sc-bZkfAO jIRgRX">
+                    <div class="sc-kLLXSd cefBcv">
+                      <span>
+                        <!-- <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" color="#623D92" height="25" width="25" xmlns="http://www.w3.org/2000/svg" style="color: #007bff;">
+                          <path d="M20 2H10c-1.103 0-2 .897-2 2v4H4c-1.103 0-2 .897-2 2v10c0 1.103.897 2 2 2h10c1.103 0 2-.897 2-2v-4h4c1.103 0 2-.897 2-2V4c0-1.103-.897-2-2-2zM4 20V10h10l.002 10H4zm16-6h-4v-4c0-1.103-.897-2-2-2h-4V4h10v10z"></path>
+                        </svg> -->
+                        <img src="images/nodejs-removebg-preview.png" alt="Node" height="40" width="40">
+                      </span>
+                      <span>
+                        <p>NodeJS</p>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <div class="sc-bZkfAO jIRgRX">
+                    <div class="sc-kLLXSd cefBcv">
+                      <span>
+                        <!-- <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" color="#623D92" height="25" width="25" xmlns="http://www.w3.org/2000/svg" style="color: #007bff;">
+                          <path d="M20 2H10c-1.103 0-2 .897-2 2v4H4c-1.103 0-2 .897-2 2v10c0 1.103.897 2 2 2h10c1.103 0 2-.897 2-2v-4h4c1.103 0 2-.897 2-2V4c0-1.103-.897-2-2-2zM4 20V10h10l.002 10H4zm16-6h-4v-4c0-1.103-.897-2-2-2h-4V4h10v10z"></path>
+                        </svg> -->
+                        <img src="images/graphic-design.png"  height="35" width="35">
+                      </span>
+                      <span>
+                        <p>Website Design</p>
+                      </span>
+                    </div>
+                  </div>
+                  <div class="sc-bZkfAO jIRgRX">
+                    <div class="sc-kLLXSd cefBcv">
+                      <span>
+                        <!-- <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" color="#623D92" height="25" width="25" xmlns="http://www.w3.org/2000/svg" style="color: #007bff;">
+                          <path d="M20 2H10c-1.103 0-2 .897-2 2v4H4c-1.103 0-2 .897-2 2v10c0 1.103.897 2 2 2h10c1.103 0 2-.897 2-2v-4h4c1.103 0 2-.897 2-2V4c0-1.103-.897-2-2-2zM4 20V10h10l.002 10H4zm16-6h-4v-4c0-1.103-.897-2-2-2h-4V4h10v10z"></path>
+                        </svg> -->
+                        <img src="images/database.png"  height="35" width="35">
+                      </span>
+                      <span>
+                        <p>Database Management</p>
+                      </span>
+                    </div>
+                  </div>
+                  <div class="sc-bZkfAO jIRgRX">
+                    <div class="sc-kLLXSd cefBcv">
+                      <span>
+                        <!-- <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" color="#623D92" height="25" width="25" xmlns="http://www.w3.org/2000/svg" style="color: #007bff;">
+                          <path d="M20 2H10c-1.103 0-2 .897-2 2v4H4c-1.103 0-2 .897-2 2v10c0 1.103.897 2 2 2h10c1.103 0 2-.897 2-2v-4h4c1.103 0 2-.897 2-2V4c0-1.103-.897-2-2-2zM4 20V10h10l.002 10H4zm16-6h-4v-4c0-1.103-.897-2-2-2h-4V4h10v10z"></path>
+                        </svg> -->
+                        <img src="images/3d.png" height="35" width="35">
+                      </span>
+                      <span>
+                        <p>Software Architecture</p>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row mb-5">
+            <div class="col-12 text-center" data-aos="fade">
+              <a href="#get-started"
+                id="enrollButton"
+                value="Enroll Now"
+                class="btn btn-primary btn-md text-white smoothscroll"
+                >Enroll Now</a>
+                <!-- <a href="#contact" class="btn btn-outline-light text-uppercase">Contact US</a> -->
+            </div>
+          </div>
+
+          <!-- <div class="row align-items-stretch">
             <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up">
               <div class="unit-4">
                 <div class="unit-4-icon">
@@ -1245,17 +1663,21 @@
               </div>
             </div>
           </div>
+          -->
         </div>
       </section>
-      <section
+
+
+
+      <!-- <section
         class="site-section testimonial-wrap"
-        id="testimonials-section"
+        id="review-section"
         data-aos="fade"
       >
         <div class="container">
           <div class="row mb-5">
             <div class="col-12 text-center">
-              <h2 class="section-title mb-3">Happy Customers</h2>
+              <h2 class="section-title mb-3">Reviews</h2>
             </div>
           </div>
         </div>
@@ -1272,15 +1694,7 @@
               <figure
                 class="mb-4 d-flex align-items-center justify-content-center"
               >
-                <div>
-                  <img
-                    src="images/xperson_1.jpg.pagespeed.ic.09Lu4Z5oU4.webp"
-                    alt="Image"
-                    class="w-50 img-fluid mb-3"
-                    data-pagespeed-url-hash="2735163746"
-                    onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
-                  />
-                </div>
+               
                 <p>John Smith</p>
               </figure>
             </div>
@@ -1297,15 +1711,7 @@
               <figure
                 class="mb-4 d-flex align-items-center justify-content-center"
               >
-                <div>
-                  <img
-                    src="images/xperson_2.jpg.pagespeed.ic.4_-d6AKMp2.webp"
-                    alt="Image"
-                    class="w-50 img-fluid mb-3"
-                    data-pagespeed-url-hash="3029663667"
-                    onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
-                  />
-                </div>
+                
                 <p>Christine Aguilar</p>
               </figure>
             </div>
@@ -1322,15 +1728,7 @@
               <figure
                 class="mb-4 d-flex align-items-center justify-content-center"
               >
-                <div>
-                  <img
-                    src="images/xperson_3.jpg.pagespeed.ic.zlEu_j4tsP.webp"
-                    alt="Image"
-                    class="w-50 img-fluid mb-3"
-                    data-pagespeed-url-hash="3324163588"
-                    onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
-                  />
-                </div>
+              
                 <p>Robert Spears</p>
               </figure>
             </div>
@@ -1347,24 +1745,18 @@
               <figure
                 class="mb-4 d-flex align-items-center justify-content-center"
               >
-                <div>
-                  <img
-                    src="images/xperson_1.jpg.pagespeed.ic.09Lu4Z5oU4.webp"
-                    alt="Image"
-                    class="w-50 img-fluid mb-3"
-                    data-pagespeed-url-hash="2735163746"
-                    onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
-                  />
-                </div>
+                
                 <p>Bruce Rogers</p>
               </figure>
             </div>
           </div>
         </div>
-      </section>
-      <section class="site-section bg-light" id="pricing-section">
+      </section> -->
+
+
+      <!-- <section class="site-section bg-light" id="pricing-section">
         <div class="container">
-          <div class="row mb-5">
+          <!-- <div class="row mb-5">
             <div class="col-12 text-center" data-aos="fade-up">
               <h2 class="section-title mb-3">Pricing</h2>
             </div>
@@ -1378,17 +1770,20 @@
               <div class="pricing">
                 <h3 class="text-center text-black">Basic</h3>
                 <div class="price text-center mb-4">
-                  <span><span>$47</span> / year</span>
+                  <span><span>&#8358;10000</span> / month</span>
                 </div>
-                <ul class="list-unstyled ul-check success mb-5">
-                  <li>Officia quaerat eaque neque</li>
-                  <li>Possimus aut consequuntur incidunt</li>
-                  <li class="remove">Lorem ipsum dolor sit amet</li>
-                  <li class="remove">Consectetur adipisicing elit</li>
-                  <li class="remove">Dolorum esse odio quas architecto sint</li>
+                <ul class="fa-ul ul-check success mb-5">
+                  <li><span class="fa-li"><i class="fa fa-check" style='color:#71bc42' ></i></span>HTML</li>
+                  <li><span class="fa-li"><i class="fa fa-check" style='color:#71bc42' ></i></span>CSS</li>
+                  <li><span class="fa-li"><i class="fa fa-check" style='color:#71bc42' ></i></span>JavaScript</li>
+                  <li><span class="fa-li"><i class="fa fa-check" style='color:#71bc42' ></i></span>SQL</li>
+                  <li class="remove"><span class="fa-li"><i class="fa fa-check" ></i></span>NodeJS</li>
+                  <li class="remove"><span class="fa-li"><i class="fa fa-check" ></i></span>Git</li>
+                  <li class="remove"><span class="fa-li"><i class="fa fa-check" ></i></span>ReactJS</li>
                 </ul>
                 <p class="text-center">
-                  <a href="#" class="btn btn-secondary">Buy Now</a>
+                  <a href="https://wa.me/2348172535234?text=Hello,%20I%20would%20like%20to%20buy%20the%20basic%20courses%20of%20the%20web%20development%20program" 
+                  class="btn btn-secondary">Buy Now</a>
                 </p>
               </div>
             </div>
@@ -1400,17 +1795,19 @@
               <div class="pricing">
                 <h3 class="text-center text-black">Premium</h3>
                 <div class="price text-center mb-4">
-                  <span><span>$200</span> / year</span>
+                  <span><span>&#8358;20000</span> / month</span>
                 </div>
-                <ul class="list-unstyled ul-check success mb-5">
-                  <li>Officia quaerat eaque neque</li>
-                  <li>Possimus aut consequuntur incidunt</li>
-                  <li>Lorem ipsum dolor sit amet</li>
-                  <li>Consectetur adipisicing elit</li>
-                  <li class="remove">Dolorum esse odio quas architecto sint</li>
+                <ul class="fa-ul ul-check success mb-5">
+                  <li><span class="fa-li"><i class="fa fa-check" style='color:#71bc42' ></i></span>HTML</li>
+                  <li><span class="fa-li"><i class="fa fa-check" style='color:#71bc42' ></i></span>CSS</li>
+                  <li><span class="fa-li"><i class="fa fa-check" style='color:#71bc42' ></i></span>JavaScript</li>
+                  <li><span class="fa-li"><i class="fa fa-check" style='color:#71bc42' ></i></span>SQL</li>
+                  <li><span class="fa-li"><i class="fa fa-check" style='color:#71bc42' ></i></span>NodeJS</li>
+                  <li class="remove"><span class="fa-li"><i class="fa fa-check" ></i></span>Git</li>
+                  <li class="remove"><span class="fa-li"><i class="fa fa-check" ></i></span>ReactJS</li>
                 </ul>
                 <p class="text-center">
-                  <a href="#" class="btn btn-primary">Buy Now</a>
+                  <a href="https://wa.me/2348172535234?text=Hello,%20I%20would%20like%20to%20buy%20the%20premium%20courses%20of%20the%20web%20development%20program" class="btn btn-primary">Buy Now</a>
                 </p>
               </div>
             </div>
@@ -1422,22 +1819,25 @@
               <div class="pricing">
                 <h3 class="text-center text-black">Professional</h3>
                 <div class="price text-center mb-4">
-                  <span><span>$750</span> / year</span>
+                  <span><span>&#8358;40000</span> / month</span>
                 </div>
-                <ul class="list-unstyled ul-check success mb-5">
-                  <li>Officia quaerat eaque neque</li>
-                  <li>Possimus aut consequuntur incidunt</li>
-                  <li>Lorem ipsum dolor sit amet</li>
-                  <li>Consectetur adipisicing elit</li>
-                  <li>Dolorum esse odio quas architecto sint</li>
+                <ul class="fa-ul ul-check success mb-5">
+                  <li><span class="fa-li"><i class="fa fa-check" style='color:#71bc42' ></i></span>HTML</li>
+                  <li><span class="fa-li"><i class="fa fa-check" style='color:#71bc42' ></i></span>CSS</li>
+                  <li><span class="fa-li"><i class="fa fa-check" style='color:#71bc42' ></i></span>JavaScript</li>
+                  <li><span class="fa-li"><i class="fa fa-check" style='color:#71bc42' ></i></span>SQL</li>
+                  <li><span class="fa-li"><i class="fa fa-check" style='color:#71bc42' ></i></span>NodeJS</li>
+                  <li><span class="fa-li"><i class="fa fa-check" style='color:#71bc42' ></i></span>Git</li>
+                  <li><span class="fa-li"><i class="fa fa-check" style='color:#71bc42' ></i></span>ReactJS</li>
                 </ul>
                 <p class="text-center">
-                  <a href="#" class="btn btn-secondary">Buy Now</a>
+                  <a href="https://wa.me/2348172535234?text=Hello,%20I%20would%20like%20to%20buy%20the%20professional%20courses%20of%20the%20web%20development%20program" class="btn btn-secondary">Buy Now</a>
                 </p>
               </div>
             </div>
-          </div>
-          <div class="row site-section" id="faq-section">
+          </div> -->
+
+          <!-- <div class="row site-section" id="faq-section">
             <div class="col-12 text-center" data-aos="fade">
               <h2 class="section-title">Frequently Ask Questions</h2>
             </div>
@@ -1446,94 +1846,76 @@
             <div class="col-lg-6">
               <div class="mb-5" data-aos="fade-up" data-aos-delay="100">
                 <h3 class="text-black h4 mb-4">
-                  Can I accept both Paypal and Stripe?
+                  Can I pay for a course in installments?
                 </h3>
                 <p>
-                  Far far away, behind the word mountains, far from the
-                  countries Vokalia and Consonantia, there live the blind texts.
-                  Separated they live in Bookmarksgrove right at the coast of
-                  the Semantics, a large language ocean.
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima earum fugiat reiciendis velit ad, amet facilis perferendis magnam odit asperiores. Ex autem, esse amet reiciendis libero dolores nobis maiores corporis.
                 </p>
               </div>
               <div class="mb-5" data-aos="fade-up" data-aos-delay="100">
                 <h3 class="text-black h4 mb-4">
-                  What available is refund period?
+                  What is the refund policy?
                 </h3>
                 <p>
-                  Far far away, behind the word mountains, far from the
-                  countries Vokalia and Consonantia, there live the blind texts.
-                  Separated they live in Bookmarksgrove right at the coast of
-                  the Semantics, a large language ocean.
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima earum fugiat reiciendis velit ad, amet facilis perferendis magnam odit asperiores. Ex autem, esse amet reiciendis libero dolores nobis maiores corporis.
                 </p>
               </div>
               <div class="mb-5" data-aos="fade-up" data-aos-delay="100">
                 <h3 class="text-black h4 mb-4">
-                  Can I accept both Paypal and Stripe?
+                  How much does a website cost?
                 </h3>
                 <p>
-                  Far far away, behind the word mountains, far from the
-                  countries Vokalia and Consonantia, there live the blind texts.
-                  Separated they live in Bookmarksgrove right at the coast of
-                  the Semantics, a large language ocean.
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima earum fugiat reiciendis velit ad, amet facilis perferendis magnam odit asperiores. Ex autem, esse amet reiciendis libero dolores nobis maiores corporis.
                 </p>
               </div>
               <div class="mb-5" data-aos="fade-up" data-aos-delay="100">
                 <h3 class="text-black h4 mb-4">
-                  What available is refund period?
+                  How long does it take to build a website?
                 </h3>
                 <p>
-                  Far far away, behind the word mountains, far from the
-                  countries Vokalia and Consonantia, there live the blind texts.
-                  Separated they live in Bookmarksgrove right at the coast of
-                  the Semantics, a large language ocean.
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima earum fugiat reiciendis velit ad, amet facilis perferendis magnam odit asperiores. Ex autem, esse amet reiciendis libero dolores nobis maiores corporis.
                 </p>
               </div>
             </div>
             <div class="col-lg-6">
               <div class="mb-5" data-aos="fade-up" data-aos-delay="100">
-                <h3 class="text-black h4 mb-4">Where are you from?</h3>
+                <h3 class="text-black h4 mb-4">
+                  Can I edit my website after it's built?
+                </h3>
                 <p>
-                  Voluptatum nobis obcaecati perferendis dolor totam unde
-                  dolores quod maxime corporis officia et. Distinctio assumenda
-                  minima maiores.
-                </p>
-              </div>
-              <div class="mb-5" data-aos="fade-up" data-aos-delay="100">
-                <h3 class="text-black h4 mb-4">What is your opening time?</h3>
-                <p>
-                  Far far away, behind the word mountains, far from the
-                  countries Vokalia and Consonantia, there live the blind texts.
-                  Separated they live in Bookmarksgrove right at the coast of
-                  the Semantics, a large language ocean.
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima earum fugiat reiciendis velit ad, amet facilis perferendis magnam odit asperiores. Ex autem, esse amet reiciendis libero dolores nobis maiores corporis.
                 </p>
               </div>
               <div class="mb-5" data-aos="fade-up" data-aos-delay="100">
                 <h3 class="text-black h4 mb-4">
-                  Can I accept both Paypal and Stripe?
+                  How long is the learning program?
                 </h3>
                 <p>
-                  Far far away, behind the word mountains, far from the
-                  countries Vokalia and Consonantia, there live the blind texts.
-                  Separated they live in Bookmarksgrove right at the coast of
-                  the Semantics, a large language ocean.
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima earum fugiat reiciendis velit ad, amet facilis perferendis magnam odit asperiores. Ex autem, esse amet reiciendis libero dolores nobis maiores corporis.
                 </p>
               </div>
               <div class="mb-5" data-aos="fade-up" data-aos-delay="100">
                 <h3 class="text-black h4 mb-4">
-                  What available is refund period?
+                  Where will the classes hold?
                 </h3>
                 <p>
-                  Far far away, behind the word mountains, far from the
-                  countries Vokalia and Consonantia, there live the blind texts.
-                  Separated they live in Bookmarksgrove right at the coast of
-                  the Semantics, a large language ocean.
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima earum fugiat reiciendis velit ad, amet facilis perferendis magnam odit asperiores. Ex autem, esse amet reiciendis libero dolores nobis maiores corporis.
+                </p>
+              </div>
+              <div class="mb-5" data-aos="fade-up" data-aos-delay="100">
+                <h3 class="text-black h4 mb-4">
+                  Can you supply wriiten content?
+                </h3>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima earum fugiat reiciendis velit ad, amet facilis perferendis magnam odit asperiores. Ex autem, esse amet reiciendis libero dolores nobis maiores corporis.
                 </p>
               </div>
             </div>
           </div>
         </div>
-      </section>
-      <section class="site-section" id="about-section">
+      </section>   -->
+
+      <!-- <section class="site-section" id="about-section">
         <div class="container">
           <div class="row">
             <div class="col-lg-6 mb-5" data-aos="fade-up" data-aos-delay="">
@@ -1556,7 +1938,7 @@
                 <div class="col-12 mb-4" data-aos="fade-up" data-aos-delay="">
                   <div class="unit-4 d-flex">
                     <div class="unit-4-icon mr-4 mb-3">
-                      <span class="text-primary flaticon-head"></span>
+                      <span class="text-primary flaticon"><i class="fa fa-bank"></i></span>
                     </div>
                     <div>
                       <h3>Bank Loan</h3>
@@ -1576,7 +1958,7 @@
                 >
                   <div class="unit-4 d-flex">
                     <div class="unit-4-icon mr-4 mb-3">
-                      <span class="text-primary flaticon-smartphone"></span>
+                      <span class="text-primary flaticon"><i class="fa fa-users"></i></span>
                     </div>
                     <div>
                       <h3>Banking Consulation</h3>
@@ -1592,8 +1974,9 @@
             </div>
           </div>
         </div>
-      </section>
-      <section class="site-section" id="blog-section">
+      </section> -->
+    
+      <!--<section class="site-section" id="blog-section">
         <div class="container">
           <div class="row mb-5">
             <div class="col-12 text-center" data-aos="fade">
@@ -1696,7 +2079,9 @@
             </div>
           </div>
         </div>
-      </section>
+      </section> -->
+
+
       <section
         class="site-section bg-light"
         id="contact-section"
@@ -1705,62 +2090,65 @@
         <div class="container">
           <div class="row mb-5">
             <div class="col-12 text-center">
-              <h2 class="section-title mb-3">Contact Us</h2>
+              <h1 class="section-title mb-3">Contact Us</h1>
             </div>
           </div>
           <div class="row mb-5">
             <div class="col-md-4 text-center">
               <p class="mb-4">
-                <span class="icon-room d-block h2 text-primary"></span>
-                <span
-                  >203 Fake St. Mountain View, San Francisco, California,
-                  USA</span
+                <span class=" fa fa-map-marker d-block fa-2x text-primary mb-3"></span>
+                <span> Lagos, Nigeria </span
                 >
               </p>
             </div>
             <div class="col-md-4 text-center">
               <p class="mb-4">
-                <span class="icon-phone d-block h2 text-primary"></span>
-                <a href="#">+1 232 3235 324</a>
+                <span class="fa fa-phone  fa-2x  d-block text-primary mb-3"></span>
+                <a href="tel:+234-817-253-5234">+234-817-253-5234</a>
               </p>
             </div>
             <div class="col-md-4 text-center">
-              <p class="mb-0">
-                <span class="icon-mail_outline d-block h2 text-primary"></span>
-                <a href="#"
+              <p class="mb-4">
+                <span class="fa fa-envelope fa-2x d-block text-primary mb-3"></span>
+                <a href="mailto:midrohub@gmail.com"
                   ><span
                     class="__cf_email__"
                     data-cfemail="4930263c3b2c24282025092d2624282027672a2624"
-                    >[email&#160;protected]</span
+                    >midrohub@gmail.com</span
                   ></a
                 >
               </p>
             </div>
           </div>
-          <div class="row">
+          
+          <!-- <div class="row">
             <div class="col-md-12 mb-5">
-              <form action="#" class="p-5 bg-white">
+              <form class="p-5 bg-white" id="contactForm" name="contactForm">
                 <h2 class="h4 text-black mb-5">Contact Form</h2>
                 <div class="row form-group">
                   <div class="col-md-6 mb-3 mb-md-0">
                     <label class="text-black" for="fname">First Name</label>
                     <input type="text" id="fname" class="form-control" />
+                    <span id="alert-fname-msg"></span>
                   </div>
                   <div class="col-md-6">
                     <label class="text-black" for="lname">Last Name</label>
                     <input type="text" id="lname" class="form-control" />
+                    <span id="alert-lname-msg"></span>
                   </div>
                 </div>
                 <div class="row form-group">
                   <div class="col-md-12">
                     <label class="text-black" for="email">Email</label>
                     <input type="email" id="email" class="form-control" />
+                    <span id="alert-email-msg"></span>
                   </div>
                 </div>
                 <div class="row form-group">
                   <div class="col-md-12">
                     <label class="text-black" for="subject">Subject</label>
                     <input type="subject" id="subject" class="form-control" />
+                    <span id="alert-subject-msg"></span>
                   </div>
                 </div>
                 <div class="row form-group">
@@ -1774,20 +2162,86 @@
                       class="form-control"
                       placeholder="Write your notes or questions here..."
                     ></textarea>
+                    <span id="alert-message-msg"></span>
                   </div>
                 </div>
                 <div class="row form-group">
                   <div class="col-md-12">
-                    <input
+                    <button
                       type="submit"
+                      id="submitButton"
                       value="Send Message"
                       class="btn btn-primary btn-md text-white"
-                    />
+                    >Send Message</button>
                   </div>
                 </div>
               </form>
             </div>
+          </div> -->
+
+          <div id="get-started" class="container" data-v-6cb69558>
+            <div data-v-6cb69558>
+              <div class="lhs" data-v-6cb69558>
+                <h2 class="intro-header" data-v-6cb69558>Get started</h2>
+                <p class="text" data-v-6cb69558>
+                  Invest in your future and advance your abilities through our extensive technical academy programs, or transform your online presence and accomplish your goals with our professional web development services.
+                </p>
+                <hr data-v-6cb69558>
+                <div class="list" data-v-6cb69558>
+                  <div class="list-item" data-v-6cb69558>
+                    <p class="text" data-v-6cb69558>Boost Your Business with Personalized Solutions Designed to Succeed.</p>
+                  </div>
+                  <div class="list-item" data-v-6cb69558>
+                    <p class="text" data-v-6cb69558>Unleash Your Creativity and Sharpen Your Skills with Cutting-Edge Training.</p>
+                  </div>
+                  <div class="list-item" data-v-6cb69558>
+                    <p class="text" data-v-6cb69558>Experience the Power of Professional Web Development for Your Unique Needs.</p>
+                  </div>
+                  <div class="list-item" data-v-6cb69558>
+                    <p class="text" data-v-6cb69558>Advance Your Career with Hands-On Learning and Real-World Results.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="rhs" data-v-6cb69558>
+                <h3 class="form-header" data-v-6cb69558>Contact Form</h3>
+                <form id="contactForm" class="form" data-v-6cb69558>
+                  <div class="label-container" data-v-6cb69558><input id="fname" class="inputText" data-v-6cb69558>
+                    <span class="floating-label" data-v-6cb69558>First Name</span>
+                    <span id="alert-fname-msg"></span>
+                  </div>
+                  <div class="label-container" data-v-6cb69558><input id="lname" class="inputText" data-v-6cb69558>
+                    <span class="floating-label" data-v-6cb69558>Last Name</span>
+                    <span id="alert-lname-msg"></span>
+                  </div>
+                  <div class="label-container" data-v-6cb69558><input id="email" type="email" class="inputText" data-v-6cb69558>
+                    <span class="floating-label" data-v-6cb69558>Email</span>
+                    <span id="alert-email-msg"></span>
+                  </div>
+                  <div class="label-container" data-v-6cb69558><input id="subject" class="inputText" data-v-6cb69558>
+                    <span class="floating-label" data-v-6cb69558>Subject</span>
+                    <span id="alert-subject-msg"></span>
+                  </div>
+                  <div class="label-container" data-v-6cb69558><textarea id="message" name="message" class="textareaText" data-v-6cb69558></textarea>
+                    <span class="floating-label" data-v-6cb69558>Message</span>
+                    <span id="alert-message-msg"></span>
+                  </div>
+                  <div class="send-now" data-v-6cb69558><button id="submitButton" type="submit" value="Send Message" class="btn btn-primary btn-md text-white">Send Message</button></div>
+                  <!-- <div class="row form-group send-now">
+                    <div class="col-md-12">
+                      <button
+                        type="submit"
+                        id="submitButton"
+                        value="Send Message"
+                        class="btn btn-primary btn-md text-white"
+                      >Send Message</button>
+                    </div> 
+                  </div> -->
+                  </form>
+              </div>
+            </div>
+            <!-- <div class="background" data-v-6cb69558><video width="1280" height="720" autoplay loop muted playsinline poster="background.webp" data-v-6cb69558><source src="/_nuxt/videos/background.3ffabbc.mp4" type="video/mp4" data-v-6cb69558></video></div> -->
           </div>
+
         </div>
       </section>
       <footer class="site-footer">
@@ -1798,73 +2252,74 @@
                 <div class="col-md-5">
                   <h2 class="footer-heading mb-4">About Us</h2>
                   <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Neque facere laudantium magnam voluptatum autem. Amet
-                    aliquid nesciunt veritatis aliquam.
+                    MidroHub is a technology company that provides solutions to businesses and individuals. We are a team of young and vibrant individuals who are passionate about technology and its impact on businesses and individuals.
                   </p>
                 </div>
                 <div class="col-md-3 ml-auto">
                   <h2 class="footer-heading mb-4">Quick Links</h2>
                   <ul class="list-unstyled">
                     <li>
-                      <a href="#about-section" class="smoothscroll">Terms</a>
-                    </li>
-                    <li>
-                      <a href="#about-section" class="smoothscroll">Policy</a>
+                      <a href="#home-section" class="smoothscroll">Home</a>
                     </li>
                     <li>
                       <a href="#about-section" class="smoothscroll">About Us</a>
                     </li>
                     <li>
-                      <a href="#services-section" class="smoothscroll"
-                        >Services</a
-                      >
+                      <a href="#academy-section" class="smoothscroll">Academy</a>
                     </li>
-                    <li>
-                      <a href="#testimonials-section" class="smoothscroll"
-                        >Testimonials</a
-                      >
-                    </li>
+                    <!-- <li>
+                      <a href="#faq-section" class="smoothscroll">FAQ</a>
+                    </li> -->
                     <li>
                       <a href="#contact-section" class="smoothscroll"
-                        >Contact Us</a
+                        >Contact Form</a
                       >
                     </li>
                   </ul>
                 </div>
                 <div class="col-md-3 footer-social">
+                  <h2 class="footer-heading mb-4">Contact Us</h2>
+                  <a href="tel:+234-817-253-5234" class="pl-0 pr-3"
+                      ><span class="fa fa-phone" style="font-size: 15px;"></span
+                    ></a>
+                  <a href="https://wa.me/2348172535234" class="pl-3 pr-3"
+                    ><span class="fa fa-whatsapp"></span
+                  ></a>
+                  <a href="mailto:midrohub@gmail.com" class="pl-3 pr-3"
+                      ><span class="fa fa-envelope"></span
+                    ></a>
                   <h2 class="footer-heading mb-4">Follow Us</h2>
-                  <a href="#" class="pl-0 pr-3"
-                    ><span class="icon-facebook"></span
+                  <a href="https://www.linkedin.com/company/midrohub/about/" target="_blank" class="pl-3 pr-3"
+                    ><span class="fa fa-linkedin"></span
                   ></a>
-                  <a href="#" class="pl-3 pr-3"
-                    ><span class="icon-twitter"></span
+                  <a href="https://x.com/midrohub" target="_blank" class="pl-0 pr-3"
+                    ><span class="fa fa-x-twitter"></span
                   ></a>
-                  <a href="#" class="pl-3 pr-3"
-                    ><span class="icon-instagram"></span
-                  ></a>
-                  <a href="#" class="pl-3 pr-3"
-                    ><span class="icon-linkedin"></span
+                  <a href="https://www.instagram.com/midrohub/" target="_blank" class="pl-3 pr-3"
+                    ><span class="fa fa-instagram"></span
                   ></a>
                 </div>
+                
               </div>
             </div>
             <div class="col-md-3">
               <h2 class="footer-heading mb-4">Subscribe Newsletter</h2>
-              <form action="#" method="post" class="footer-subscribe">
+              <form id="subscribeForm" class="footer-subscribe">
                 <div class="input-group mb-3">
                   <input
-                    type="text"
+                    type="email"
                     class="form-control border-secondary text-white bg-transparent"
                     placeholder="Enter Email"
                     aria-label="Enter Email"
                     aria-describedby="button-addon2"
+                    id="subemail"
+                    name="subemail"
                   />
                   <div class="input-group-append">
                     <button
                       class="btn btn-primary text-black"
-                      type="button"
-                      id="button-addon2"
+                      type="submit"
+                      id="subscribeButton"
                     >
                       Send
                     </button>
@@ -1877,25 +2332,17 @@
             <div class="col-md-12">
               <div class="border-top pt-5">
                 <p>
-                  Copyright &copy;
-                  <script
-                    data-cfasync="false"
-                    src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"
-                  ></script>
-                  <script>
-                    document.write(new Date().getFullYear());
-                  </script>
-                  All rights reserved | This template is made with
-                  <i class="icon-heart-o" aria-hidden="true"></i> by
-                  <a href="https://colorlib.com" target="_blank">Colorlib</a>
+                  Copyright &copy; 2022 MidroHub. All rights reserved.
                 </p>
               </div>
             </div>
           </div>
         </div>
       </footer>
+      
     </div>
     <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/custom.js"></script>
     <script src="js/jquery-ui.js+popper.min.js.pagespeed.jc.F8k_35KFzQ.js"></script>
     <script>
       eval(mod_pagespeed_LCM_CQRMo6);
