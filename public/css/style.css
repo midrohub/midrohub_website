@@ -9248,9 +9248,13 @@ body:after {
     display: none;
   }
 }
-@media (max-width: 767.98px) {
+@media (max-width: 767.98px) {  
   .circle-bg:after {
     display: none;
+  }
+
+  .mobile-text-align{
+text-align: center;
   }
 }
 
@@ -9522,6 +9526,9 @@ body:after {
 }
 .team-member {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .team-member figure {
   margin: 0;
@@ -9531,7 +9538,7 @@ body:after {
   border-radius: 50%;
   width: 250px;
   height: 250px;
-  margin-left: 20px;
+  /* margin-left: 20px; */
 }
 
 .team-member .social {
